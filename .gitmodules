@@ -1,6 +1,7 @@
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
 [submodule "vim/pack/my-plugins/start/syntastic"]
 	path = vim/pack/my-plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
