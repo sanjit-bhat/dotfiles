@@ -1,0 +1,14 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Sanjit Bhat
+	email = sanjit.bhat@utexas.edu
+[core]
+	autocrlf = input
+	editor = vim
+[color]
+	ui = true
+[branch]
+	autosetuprebase = always
+[push]
+	default = tracking

@@ -1,0 +1,3 @@
+#!/bin/zsh
+ssh -i ~/.ssh/utlab bhat@corona-borealis.cs.utexas.edu
+
