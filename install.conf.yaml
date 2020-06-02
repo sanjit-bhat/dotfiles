@@ -10,6 +10,7 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
+    ~/.inputrc: inputrc
 
 - create:
     - ~/Projects
