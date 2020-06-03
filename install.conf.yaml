@@ -1,20 +1,21 @@
+---
 - defaults:
     link:
-        relink: true
+      relink: true
 
 - clean: ['~']
 
 - link:
     ~/.dotfiles: ''
-    ~/.vim: vim
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
-    ~/.gitconfig: gitconfig
-    ~/.inputrc: inputrc
+    ~/.gitconfig:
+    ~/.inputrc:
+    ~/.vim:
+    ~/.vimrc:
+    ~/.zsh:
+    ~/.zshrc:
 
 - create:
     - ~/Projects
 
 - shell:
-    - [sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"]
     - [git submodule update --init --recursive, Installing submodules]
