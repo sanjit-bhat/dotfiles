@@ -7,7 +7,7 @@ fi
 
 # export TERM="xterm-256color"
 
-# NOTE: use Tango Dark color pallet
+# NOTE: use Tango Dark color pallet with 1c1c1c background
 # ZSH Plugins
 source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
