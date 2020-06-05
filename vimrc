@@ -196,6 +196,7 @@ let g:syntastic_asm_checkers = ['gcc']
 let g:syntastic_text_checkers = ['proselint']
 let g:syntastic_vim_checkers = ['vint']
 let g:syntastic_zsh_checkers = ['zsh']
+let g:syntastic_sh_checkers = ['shellcheck', 'shfmt']
 
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys

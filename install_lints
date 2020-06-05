@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env sh
 
 echo 'Installing lints through brew'
 # icarus-verilog -> Verilog
@@ -6,12 +6,16 @@ echo 'Installing lints through brew'
 # hadolint -> Dockerfile
 # cppcheck -> C/C++
 # llvm -> C/C++
+# shellcheck -> sh
+# shfmt -> sh
 brew install \
     icarus-verilog \
     golangci/tap/golangci-lint \
     hadolint \
     cppcheck \
-    llvm
+    llvm \
+    shellcheck \
+    shfmt
 
 echo 'Linking LLVM Lints'
 ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
