@@ -1,18 +1,18 @@
 #!/usr/bin/env sh
 
 echo 'Installing lints through brew'
-# icarus-verilog -> Verilog
+# cppcheck -> C/C++
 # golangci/tap/golangci-lint -> Go
 # hadolint -> Dockerfile
-# cppcheck -> C/C++
+# icarus-verilog -> Verilog
 # llvm -> C/C++
 # shellcheck -> sh
 # shfmt -> sh
 brew install \
-    icarus-verilog \
+    cppcheck \
     golangci/tap/golangci-lint \
     hadolint \
-    cppcheck \
+    icarus-verilog \
     llvm \
     shellcheck \
     shfmt
@@ -21,20 +21,18 @@ echo 'Linking LLVM Lints'
 ln -s "$(brew --prefix llvm)/bin/clang-format" "/usr/local/bin/clang-format"
 ln -s "$(brew --prefix llvm)/bin/clang-tidy" "/usr/local/bin/clang-tidy"
 
-echo 'Tex/Latex/Markdown/Text Lint'
-pip install proselint
-
-echo 'YAML Lint'
-pip install yamllint
-
-echo 'Python Lint'
-pip install pylint
-
-echo 'Cmake Lint'
-pip install cmakelint
-
-echo 'Vim Lint'
-pip install vim-vint
+echo 'Installing lints through pip'
+# cmakelint -> Cmake
+# proselint -> Tex/Latex/Markdown/Text
+# pylint -> Python
+# vim-vint -> Vim
+# yamllint -> YAML
+pip install \
+    cmakelint \
+    proselint \
+    pylint \
+    vim-vint \
+    yamllint
 
 echo 'JavaScript Lint'
 sudo npm install standard --global
