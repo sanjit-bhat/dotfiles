@@ -5,7 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# export TERM="xterm-256color"
+# Supports better colors in tmux
+export TERM="xterm-256color"
 
 # NOTE: use Tango Dark color pallet with 1c1c1c background
 # ZSH Plugins
