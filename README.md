@@ -15,8 +15,7 @@ Steps for setting up the dev environment:
     1. Run `install_lints` to install all the lints and syntax checkers needed for Vim Syntastic to work
 
 Notes:
-1. 
-`git submodule update --init --recursive` in `install.conf.yaml`
+1. `git submodule update --init --recursive` in `install.conf.yaml`
 keeps submodules at their proper versions
 1. To upgrade submodules to their latest versions, run
 `git submodule update --init --remote`
