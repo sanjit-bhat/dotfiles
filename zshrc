@@ -27,6 +27,7 @@ alias gg="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push"
+alias gpu="git pull"
 
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
