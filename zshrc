@@ -23,6 +23,7 @@ export EDITOR='vim'
 alias ut="cd $HOME/Documents/UT-Misc"
 alias sec="cd $HOME/Documents/UT-Classes/cs-380s"
 alias v="vim"
+alias ls="ls -G"
 alias gg="git status"
 alias ga="git add"
 alias gc="git commit -m"
