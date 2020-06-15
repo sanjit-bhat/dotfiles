@@ -8,7 +8,9 @@ fi
 # Supports better colors in tmux
 export TERM="xterm-256color"
 
-# NOTE: use Tango Dark color pallet with 1c1c1c background
+# NOTE: use Tango Dark color pallet with 1c1c1c background for iTerm2
+# This can be done by importing the iTerm config file in this repo into iTerm2
+
 # ZSH Plugins
 source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -17,30 +19,12 @@ source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # For the z command to work properly
 . /usr/local/etc/profile.d/z.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias linear="$HOME/Documents/UT-Classes/m-341h"
-alias arch="$HOME/Documents/UT-Classes/cs-429h"
-alias sec="$HOME/Documents/UT-Classes/cs-380s"
-alias his="$HOME/Documents/UT-Classes/his-315k"
-alias prob="$HOME/Documents/UT-Classes/m-362k"
-alias lin="$HOME/Documents/UT-Classes/cs-178h"
-alias ut="$HOME/Documents/UT-Misc"
+alias ut="cd $HOME/Documents/UT-Misc"
+alias sec="cd $HOME/Documents/UT-Classes/cs-380s"
 
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
