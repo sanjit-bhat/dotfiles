@@ -8,9 +8,6 @@ fi
 # Supports better colors in tmux
 export TERM="xterm-256color"
 
-# NOTE: use Tango Dark color pallet with 1c1c1c background for iTerm2
-# This can be done by importing the iTerm config file in this repo into iTerm2
-
 # ZSH Plugins
 source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -22,9 +19,14 @@ source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
 
-# Example aliases
+# Aliases
 alias ut="cd $HOME/Documents/UT-Misc"
 alias sec="cd $HOME/Documents/UT-Classes/cs-380s"
+alias v="vim"
+alias gg="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
 
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
