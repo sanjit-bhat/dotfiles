@@ -17,3 +17,6 @@
 [submodule "vim/pack/my-plugins/start/rust.vim"]
 	path = vim/pack/my-plugins/start/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "zsh/plugins/fzf"]
+	path = zsh/plugins/fzf
+	url = https://github.com/junegunn/fzf
