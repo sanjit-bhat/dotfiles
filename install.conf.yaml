@@ -22,3 +22,9 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    -
+      command: zsh/plugins/fzf/install
+      description: Installing fzf binaries
+      stdin: true
+      stdout: true
+      stderr: true
