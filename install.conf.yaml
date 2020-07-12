@@ -7,7 +7,7 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.fzf: zsh/plugins/fzf
+    ~/.fzf: '~/.dotfiles/zsh/plugins/fzf'
     ~/.fzf.zsh:
     ~/.gitconfig:
     ~/.inputrc:

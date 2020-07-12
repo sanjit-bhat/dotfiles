@@ -1,22 +1,22 @@
 [submodule "dotbot"]
 	path = dotbot
-	url = https://github.com/anishathalye/dotbot
+	url = https://github.com/anishathalye/dotbot.git
 	ignore = dirty
 [submodule "vim/pack/my-plugins/start/syntastic"]
 	path = vim/pack/my-plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/pack/my-plugins/start/rust.vim"]
+	path = vim/pack/my-plugins/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
 [submodule "zsh/plugins/powerlevel10k"]
 	path = zsh/plugins/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
 [submodule "zsh/plugins/zsh-syntax-highlighting"]
 	path = zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "zsh/plugins/zsh-autosuggestions"]
 	path = zsh/plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
-[submodule "vim/pack/my-plugins/start/rust.vim"]
-	path = vim/pack/my-plugins/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "zsh/plugins/fzf"]
 	path = zsh/plugins/fzf
-	url = https://github.com/junegunn/fzf
+	url = https://github.com/junegunn/fzf.git
