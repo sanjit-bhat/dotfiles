@@ -30,6 +30,7 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gpu="git pull"
 alias gd="git diff"
+alias rg="rg -S"  # Smart case flag
 
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
