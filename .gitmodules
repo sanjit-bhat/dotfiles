@@ -2,12 +2,6 @@
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot.git
 	ignore = dirty
-[submodule "vim/pack/my-plugins/start/syntastic"]
-	path = vim/pack/my-plugins/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "vim/pack/my-plugins/start/rust.vim"]
-	path = vim/pack/my-plugins/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
 [submodule "zsh/plugins/powerlevel10k"]
 	path = zsh/plugins/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
