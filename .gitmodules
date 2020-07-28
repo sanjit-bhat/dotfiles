@@ -14,3 +14,12 @@
 [submodule "zsh/plugins/fzf"]
 	path = zsh/plugins/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim/pack/vendor/start/indentLine"]
+	path = vim/pack/vendor/start/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "vim/pack/vendor/start/rust.vim"]
+	path = vim/pack/vendor/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim/pack/vendor/start/syntastic"]
+	path = vim/pack/vendor/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
