@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 
-latexmk -f -interaction=nonstopmode -pv -pdfxe -pdfxelatex="xelatex --shell-escape %O %S" "$1".tex 
+latexmk -lualatex -interaction=nonstopmode -pv "$1".tex 
+# latexmk -f -interaction=nonstopmode -pv -pdfxe -pdfxelatex="xelatex --shell-escape %O %S" "$1".tex 
 latexmk -c
