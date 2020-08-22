@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+
+file="$1"
+line="$2"
+
+[ "${file:0:1}" == "/" ] || file="${PWD}/$file"
+
+exec osascript << EOF
+    tell application "iTerm"
+        activate
+        set t to (create window with default profile)
+        tell t
+            tell current session
+                write text "vim $file"
+                write text ":$line"
+            end tell
+        end tell
+    end tell
+EOF
