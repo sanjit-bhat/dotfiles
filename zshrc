@@ -28,8 +28,9 @@ alias gg="git status"
 alias ga="git add"
 alias gc="git commit -m"
 alias gp="git push"
-alias gpu="git pull"
+alias gpl="git pull"
 alias gd="git diff"
+alias gr="git restore"
 alias rg="rg -S"  # Smart case flag
 
 # Gtkwave for Verilog visualization
