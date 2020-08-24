@@ -8,7 +8,6 @@ print('Getting the raw HTML')
 URL = 'https://apps.cs.utexas.edu/unixlabstatus/'
 page = requests.get(URL)
 
-
 print('Getting names of all UTCS lab machines')
 soup = BeautifulSoup(page.content, 'html.parser')
 results = soup.find_all('td', style=lambda text: 'left' in text.lower() and 'background-color: white' in text.lower())
