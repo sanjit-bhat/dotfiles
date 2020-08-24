@@ -20,8 +20,9 @@ source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export EDITOR='vim'
 
 # Aliases
-alias ut="cd $HOME/Documents/UT-Misc"
-alias sec="cd $HOME/Documents/UT-Classes/cs-380s"
+alias os="cd $HOME/Projects/cs-439h"
+alias law="cd $HOME/Projects/cs-395t"
+alias sec="cd $HOME/Projects/cs-378h"
 alias v="vim"
 alias ls="ls -G"
 alias gg="git status"
