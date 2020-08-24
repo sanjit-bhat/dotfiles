@@ -14,7 +14,7 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # For the z command to work properly
-. /usr/local/etc/profile.d/z.sh
+. ~/.z.sh
 
 # Preferred editor for local and remote sessions
 export EDITOR='vim'

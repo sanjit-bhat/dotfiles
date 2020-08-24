@@ -15,6 +15,7 @@
     ~/.tmux.conf:
     ~/.vim:
     ~/.vimrc:
+    ~/.z.sh:
     ~/.zsh:
     ~/.zshrc:
 
