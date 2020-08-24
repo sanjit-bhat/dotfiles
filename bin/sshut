@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-ssh -i ~/.ssh/utlab bhat@corona-borealis.cs.utexas.edu
+ssh -i ~/.ssh/utlab bhat@the-professor.cs.utexas.edu
 
