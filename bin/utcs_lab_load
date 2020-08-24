@@ -3,19 +3,13 @@
 import requests
 from bs4 import BeautifulSoup
 import os
+import multiprocessing as mp
+from termcolor import colored
+from texttable import Texttable
+import humanize
 
-print('Getting the raw HTML')
-URL = 'https://apps.cs.utexas.edu/unixlabstatus/'
-page = requests.get(URL)
 
-print('Getting names of all UTCS lab machines')
-soup = BeautifulSoup(page.content, 'html.parser')
-results = soup.find_all('td', style=lambda text: 'left' in text.lower() and 'background-color: white' in text.lower())
-machines = [name.text for name in results]
-
-print('Querying machines for resource data')
-resources = []
-for name in machines:
+def query_machine(name):
     print(f'Connecting to {name}')
     command = ('timeout 5s '
         'ssh -i ~/.ssh/utlab '
@@ -23,17 +17,53 @@ for name in machines:
         f'bhat@{name}.cs.utexas.edu'
         ''' '{ lscpu | grep CPU\(s\): | head -n1 | awk '"'"'{print $2}'"'"'; '''  # Get CPU cores
         '''mpstat | tail -n1 | awk '"'"'{print $4}'"'"'; '''  # Get CPU utilization as percentage
-        '''free | grep Mem | awk '"'"'{print $4}'"'"'; }' ''')  # Get available memory
+        '''free -b | grep Mem | awk '"'"'{print $4}'"'"'; }' ''')  # Get available memory
 
     try:
         stream = os.popen(command)
         total_cores, cpu_util, avail_mem = [float(x) for x in stream.read().split('\n')[:-1]]
+        return [name, total_cores * (1 - cpu_util * 0.01), avail_mem]
     except:
-        print(f"Error: couldn't connect to {name}")
+        print(colored(f"Error: couldn't connect to {name}", 'red'))
+        return [name, 0.0, 0.0]
 
-    resources.append([name, total_cores * (1 - cpu_util * 0.01), avail_mem])
 
-print('Top 5 CPU Machines:')
-print(sorted(resources, key=lambda x: x[1])[-5:])
-print('Top 5 Mem Machines:')
-print(sorted(resources, key=lambda x: x[2])[-5:])
+if __name__ == '__main__':
+    print(colored('Getting the raw HTML for UTCS lab monitor app', 'blue'))
+    URL = 'https://apps.cs.utexas.edu/unixlabstatus/'
+    page = requests.get(URL)
+
+    print(colored('Getting names of all UTCS lab machines', 'blue'))
+    soup = BeautifulSoup(page.content, 'html.parser')
+    results = soup.find_all('td', style=lambda text: 'left' in text.lower() and 'background-color: white' in text.lower())
+    machines = [name.text for name in results]
+
+    print(colored('Querying machines for resource data', 'blue'))
+    pool = mp.Pool(mp.cpu_count())
+    resources = pool.map(query_machine, machines)
+    pool.close()
+
+    # Sort according to cpu/mem
+    labels = [['name', 'cores avail', 'mem avail']]
+    cpu = labels + sorted(resources, reverse=True, key=lambda x: x[1])
+    mem = labels + sorted(resources, reverse=True, key=lambda x: x[2])
+
+    # Convert memory to human-readable format. This modifies `mem` list also
+    for i in range(1, len(cpu)):
+        cpu[i][2] = humanize.naturalsize(cpu[i][2])
+
+    make_table = lambda matrix: Texttable().set_cols_align(['l', 'c', 'c']).add_rows(matrix).draw()
+
+    print(colored('Top 5 CPU Machines', 'green'))
+    print(colored(make_table(cpu[:6]), 'cyan'))
+    print(colored('Top 5 Mem Machines:', 'green'))
+    print(colored(make_table(mem[:6]), 'cyan'))
+
+    save_dir = '/tmp/utcs_lab_load/'
+    print(colored(f'Writing full list of sorted resources to {save_dir}cpu.txt and {save_dir}mem.txt', 'blue'))
+    if not os.path.exists(save_dir):
+        os.mkdir(save_dir)
+    with open(f'{save_dir}cpu.txt', 'w') as f:
+        f.write(make_table(cpu))
+    with open(f'{save_dir}mem.txt', 'w') as f:
+        f.write(make_table(mem))
