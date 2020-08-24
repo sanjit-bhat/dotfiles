@@ -1,0 +1,38 @@
+#!/usr/bin/env python
+
+import requests
+from bs4 import BeautifulSoup
+import os
+
+print('Getting the raw HTML')
+URL = 'https://apps.cs.utexas.edu/unixlabstatus/'
+page = requests.get(URL)
+
+
+print('Getting names of all UTCS lab machines')
+soup = BeautifulSoup(page.content, 'html.parser')
+results = soup.find_all('td', style=lambda text: 'left' in text.lower() and 'background-color: white' in text.lower())
+machines = [name.text for name in results]
+
+print('Querying machines for resource data')
+resources = []
+for name in machines:
+    print(f'Connecting to {name}')
+    command = ('ssh -i ~/.ssh/utlab -o "StrictHostKeyChecking no" '  # SSH without asking for host key permissions
+        f'bhat@{name}.cs.utexas.edu'
+        ''' '{ lscpu | grep CPU\(s\): | head -n1 | awk '"'"'{print $2}'"'"'; '''  # Get CPU cores
+        '''mpstat | tail -n1 | awk '"'"'{print $4}'"'"'; '''  # Get CPU utilization as percentage
+        '''free | grep Mem | awk '"'"'{print $4}'"'"'; }' ''')  # Get available memory
+
+    try:
+        stream = os.popen(command)
+        total_cores, cpu_util, avail_mem = [float(x) for x in stream.read().split('\n')[:-1]]
+    except:
+        print(f"Error: couldn't connect to {name}")
+
+    resources.append([name, total_cores * (1 - cpu_util * 0.01), avail_mem])
+
+print('Top 5 CPU Machines:')
+print(sorted(resources, key=lambda x: x[1])[-5:])
+print('Top 5 Mem Machines:')
+print(sorted(resources, key=lambda x: x[2])[-5:])
