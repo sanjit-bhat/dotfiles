@@ -217,3 +217,6 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Forward search PDF using Skim
 map ,r :w<CR>:silent !/Applications/Skim.app/Contents/SharedSupport/displayline <C-r>=line('.')<CR> %<.pdf<CR>
+
+" Prevent conceal in LaTeX files
+let g:tex_conceal = ''
