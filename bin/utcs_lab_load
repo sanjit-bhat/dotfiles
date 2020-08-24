@@ -17,7 +17,9 @@ print('Querying machines for resource data')
 resources = []
 for name in machines:
     print(f'Connecting to {name}')
-    command = ('ssh -i ~/.ssh/utlab -o "StrictHostKeyChecking no" '  # SSH without asking for host key permissions
+    command = ('timeout 5s '
+        'ssh -i ~/.ssh/utlab '
+        '-o "StrictHostKeyChecking no" '  # SSH without asking for host key permissions
         f'bhat@{name}.cs.utexas.edu'
         ''' '{ lscpu | grep CPU\(s\): | head -n1 | awk '"'"'{print $2}'"'"'; '''  # Get CPU cores
         '''mpstat | tail -n1 | awk '"'"'{print $4}'"'"'; '''  # Get CPU utilization as percentage
