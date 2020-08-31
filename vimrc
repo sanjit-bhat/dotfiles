@@ -220,3 +220,11 @@ map ,r :w<CR>:silent !/Applications/Skim.app/Contents/SharedSupport/displayline 
 
 " Prevent conceal in LaTeX files
 let g:tex_conceal = ''
+
+" NERDTree-like File Exploration with Native Vim netrw plugin
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 15
+nnoremap <leader>n <Esc>:Vex<cr>
