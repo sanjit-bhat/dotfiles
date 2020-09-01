@@ -10,6 +10,7 @@
     ~/.gitconfig:
     ~/.inputrc:
     ~/.p10k.zsh:
+    ~/.ssh/config: 'ssh_config'
     ~/.tmux.conf:
     ~/.vim:
     ~/.vimrc:
