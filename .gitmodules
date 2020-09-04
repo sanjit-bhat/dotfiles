@@ -20,3 +20,6 @@
 [submodule "vim/pack/vendor/start/syntastic"]
 	path = vim/pack/vendor/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/pack/vendor/start/vim-markdown-preview"]
+	path = vim/pack/vendor/start/vim-markdown-preview
+	url = https://github.com/JamshedVesuna/vim-markdown-preview.git

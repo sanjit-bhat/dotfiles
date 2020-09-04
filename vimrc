@@ -229,3 +229,9 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 15
 let g:netrw_sort_sequence = '[\/]$,\<core\%(\.\d\+\)\=\>,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$'
 nnoremap <leader>n <Esc>:Vex<cr>
+
+" Options for vim-markdown-preview
+let vim_markdown_preview_github=1  " Use Grip - GitHub style Markdown - for previewing
+let vim_markdown_preview_toggle=2  " Update preview on buffer write
+let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_temp_file=1  " Remove rendered html after viewing in browser
