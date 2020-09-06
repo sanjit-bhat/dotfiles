@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Supports better colors in tmux
+# Support better colors in tmux
 export TERM="xterm-256color"
 
 # ZSH Plugins
@@ -13,18 +13,21 @@ source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# For the z command to work properly
+# Enable z command to work properly
 . ~/.z.sh
 
-# Preferred editor for local and remote sessions
+# Set preferred editor for local and remote sessions
 export EDITOR='vim'
 
-# Aliases
+# Add aliases
 alias os="cd $HOME/Projects/cs-439h"
 alias law="cd $HOME/Projects/cs-395t"
 alias sec="cd $HOME/Projects/cs-378h"
+
 alias v="vim"
 alias ls="ls -G"
+alias rg="rg -S"  # Smart case flag
+
 alias gg="git status"
 alias ga="git add"
 alias gc="git commit -m"
@@ -32,20 +35,22 @@ alias gp="git push"
 alias gpl="git pull"
 alias gd="git diff"
 alias gr="git restore"
-alias rg="rg -S"  # Smart case flag
 
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
 
-# Using the pyenv version of Python
+# Use the pyenv version of Python
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# Adding dotfiles folder to path
+# Add dotfiles folder to path
 export PATH=~/.dotfiles/bin:${PATH}
 
-# Use Vim bindings
+# Add Cargo to path
+export PATH=~/.cargo/bin:${PATH}
+
+# Use Vim bindings in Zsh
 bindkey -v
 
 # Nvm - Manages node versions
