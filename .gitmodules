@@ -23,3 +23,6 @@
 [submodule "vim/pack/vendor/start/vim-markdown-preview"]
 	path = vim/pack/vendor/start/vim-markdown-preview
 	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
+[submodule "vim/pack/vendor/start/vim-polyglot"]
+	path = vim/pack/vendor/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
