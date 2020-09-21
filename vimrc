@@ -153,21 +153,6 @@ set laststatus=2
 set backspace=indent,eol,start
 
 " --------- Plugin settings -----------
-" Plugins will be downloaded under the specified directory.
-"call plug#begin('~/.vim/plugged')
-
-" Declare the list of plugins.
-"Plug 'vim-syntastic/syntastic'
-"Plug 'jiangmiao/auto-pairs'
-"Plug 'scrooloose/nerdtree'
-"Plug 'google/vim-maktaba'
-"Plug 'google/vim-codefmt'
-"Plug 'google/vim-glaive'
-"Plug 'ycm-core/YouCompleteMe' 
-"Plug 'tpope/vim-surround'
-
-" List ends here. Plugins become visible to Vim after this call.
-"call plug#end()
 
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1 " Fill location-list with errors
