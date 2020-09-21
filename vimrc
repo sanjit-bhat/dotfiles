@@ -158,7 +158,8 @@ set backspace=indent,eol,start
 let g:syntastic_always_populate_loc_list = 1 " Fill location-list with errors
 let g:syntastic_auto_loc_list = 1 " Auto open error window when errors detected
 let g:syntastic_check_on_open = 0 " Auto check files upon open and save
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 0 " Auto check files upon write or quit
+let g:syntastic_mode_map = { 'mode': 'passive' } " Default to passive mode on all file types
 
 nnoremap <Leader>s :SyntasticCheck<CR> " Check for errors
 nnoremap <Leader>r :SyntasticReset<CR> " Reset error window
