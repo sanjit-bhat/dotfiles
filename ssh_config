@@ -1,4 +1,10 @@
+Host *
+    ServerAliveInterval 60
 Host ut 
+    HostName cranium.cs.utexas.edu
+    User bhat
+    IdentityFile ~/.ssh/utlab
+Host big 
     HostName the-professor.cs.utexas.edu
     User bhat
     IdentityFile ~/.ssh/utlab
