@@ -8,3 +8,7 @@ Host big
     HostName the-professor.cs.utexas.edu
     User bhat
     IdentityFile ~/.ssh/utlab
+Host sec
+    HostName 4.tcp.ngrok.io
+    User user
+    Port 10681
