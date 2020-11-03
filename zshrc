@@ -35,6 +35,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gd="git diff"
 alias gr="git restore"
+alias gl="git log --all --graph --decorate"
 
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
