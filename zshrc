@@ -12,6 +12,7 @@ export TERM="xterm-256color"
 source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Enable z command to work properly
 . ~/.z.sh
@@ -53,6 +54,10 @@ export PATH=~/.cargo/bin:${PATH}
 
 # Use Vim bindings in Zsh
 bindkey -v
+
+# Bind 'k' and 'j' to history search in Vim mode
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # Nvm - Manages node versions
 export NVM_DIR="$HOME/.nvm"
