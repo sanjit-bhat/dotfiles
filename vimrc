@@ -89,6 +89,9 @@ nnoremap <C-l> <C-w>l
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 
+" quicker no highlighting after searches
+nnoremap <leader>h <Esc>:noh<cr>
+
 " quicker file saving and quitting using leader
 nnoremap <leader>w <Esc>:w<cr>
 nnoremap <leader>q <Esc>:q<cr>
