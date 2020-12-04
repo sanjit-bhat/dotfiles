@@ -28,6 +28,7 @@ alias sec="cd $HOME/Projects/cs-378h"
 alias v="vim"
 alias ls="ls -G"
 alias rg="rg -S"  # Smart case flag
+alias p="ipython"
 
 alias gg="git status"
 alias ga="git add"
