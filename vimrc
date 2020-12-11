@@ -17,7 +17,9 @@ set nocompatible
 " Turn on syntax highlighting.
 syntax on
 
-" Search up parent directies until you find .tags file
+" Search up parent directies until you find .tags file created by ctags
+" Use <C-]> to navigate to definition
+" Use <C-T> to go back
 set tags=./.tags;/
 
 set showmatch " show matching braces when text indicator is over them
