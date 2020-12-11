@@ -9,6 +9,6 @@ Host big
     User bhat
     IdentityFile ~/.ssh/utlab
 Host sec
-    HostName 4.tcp.ngrok.io
-    User user
-    Port 10681
+    HostName 2.tcp.ngrok.io
+    User palash
+    Port 11062

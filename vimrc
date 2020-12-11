@@ -17,6 +17,9 @@ set nocompatible
 " Turn on syntax highlighting.
 syntax on
 
+" Search up parent directies until you find .tags file
+set tags=./.tags;/
+
 set showmatch " show matching braces when text indicator is over them
 
 " highlight current line, but only in active window

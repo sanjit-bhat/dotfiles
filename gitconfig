@@ -6,6 +6,7 @@
 [core]
 	autocrlf = input
 	editor = vim
+	excludesfile = /Users/sanjit/.gitignore
 [color]
 	ui = true
 [branch]
