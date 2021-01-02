@@ -1,8 +1,16 @@
 #!/usr/bin/env sh
 
-brew install pyenv
+# brew install pyenv
 
-VERSION="3.8.2"  # Use latest version instead of 3.8.2
+VERSION="3.9.0"  # Use latest version here
+
+# Save previous installed packages
+pip list | awk '{print $1}' | tail -n +3 > reqs.txt
+
+# Install and switch to new Python version
 pyenv install $VERSION 
 pyenv global $VERSION
 
+# Install all of the previous packages
+cat reqs.txt | xargs -I {} pip install {}
+rm reqs.txt
