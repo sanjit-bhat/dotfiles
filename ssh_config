@@ -8,7 +8,7 @@ Host big
     HostName the-professor.cs.utexas.edu
     User bhat
     IdentityFile ~/.ssh/utlab
-Host sec
-    HostName 2.tcp.ngrok.io
-    User palash
-    Port 11062
+Host vm
+    HostName 172.16.132.2
+    User sanjit
+    IdentityFile ~/.ssh/id_rsa
