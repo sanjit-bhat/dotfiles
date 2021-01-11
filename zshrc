@@ -29,7 +29,7 @@ alias v="vim"
 alias ls="ls -G"
 alias rg="rg -S"  # Smart case flag
 alias p="ipython"
-alias ctags="`brew --prefix`/bin/ctags -R -f ./.tags ."
+alias ctags="ctags -R -f ./.tags ."
 alias u="cd .."
 
 alias gg="git status"
