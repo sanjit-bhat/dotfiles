@@ -14,6 +14,12 @@ source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
+# Autoload all ZSH functions in ~/.zfunc
+# -U disables alias expansion
+# z forces ZSH-style autoloading
+fpath=( ~/.zfunc "${fpath[@]}" )
+autoload -Uz $fpath[1]/*(.:t)
+
 # Enable z command to work properly
 . ~/.z.sh
 
