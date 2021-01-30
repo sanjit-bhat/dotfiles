@@ -6,7 +6,7 @@ import sys
 
 fname = sys.argv[1]
 with open(fname, 'r') as f:
-    output = [line.strip() + '\n' for line in f]
+    output = [line.rstrip() + '\n' for line in f]
 
 with open(fname, 'w') as f:
     f.writelines(output)
