@@ -212,8 +212,8 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " Forward search PDF using Skim
 map ,r :w<CR>:silent !/Applications/Skim.app/Contents/SharedSupport/displayline <C-r>=line('.')<CR> %<.pdf<CR>
 
-" Prevent conceal in LaTeX files
-let g:tex_conceal = ''
+" Open conceal when cursor is over the text
+let g:indentLine_concealcursor = ""
 
 " NERDTree-like File Exploration with Native Vim netrw plugin
 let g:netrw_banner = 0
@@ -226,6 +226,6 @@ nnoremap <leader>n <Esc>:Vex<cr>
 
 " Options for vim-markdown-preview
 let vim_markdown_preview_github=1  " Use Grip - GitHub style Markdown - for previewing
-let vim_markdown_preview_toggle=2  " Update preview on buffer write
-let vim_markdown_preview_browser='Google Chrome'
+let vim_markdown_preview_toggle=1  " Update preview with Ctrl-p
+let vim_markdown_preview_browser='Safari'
 let vim_markdown_preview_temp_file=1  " Remove rendered html after viewing in browser
