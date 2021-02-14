@@ -32,7 +32,6 @@ alias law="cd $HOME/Projects/cs-395t"
 alias sec="cd $HOME/Projects/cs-378h"
 
 alias v="vim"
-alias ls="ls -G"
 alias rg="rg -S"  # Smart case flag
 alias p="ipython"
 alias ctags="ctags -R -f ./.tags ."
@@ -49,6 +48,16 @@ alias gpl="git pull"
 alias gd="git diff"
 alias gr="git restore"
 alias gl="git log --all --graph --decorate"
+
+# Conditional aliases depending on OS
+case `uname` in
+  Darwin)
+    alias ls="ls -G"
+  ;;
+  Linux)
+    alias ls="ls --color"
+  ;;
+esac
 
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
