@@ -32,3 +32,6 @@
 [submodule "zsh/plugins/zsh-history-substring-search"]
 	path = zsh/plugins/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
+[submodule "tmux/plugins/tmux-resurrect"]
+	path = tmux/plugins/tmux-resurrect
+	url = https://github.com/tmux-plugins/tmux-resurrect
