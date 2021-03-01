@@ -1,0 +1,11 @@
+if [ $# -eq 0 ]
+then
+    cd ..
+else
+    dots=""
+    for i in {1..$1}
+    do
+        dots+="../"
+    done
+    cd $dots
+fi

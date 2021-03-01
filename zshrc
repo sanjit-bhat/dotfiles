@@ -35,7 +35,6 @@ alias v="vim"
 alias rg="rg -S"  # Smart case flag
 alias p="ipython"
 alias ctags="ctags -R -f ./.tags ."
-alias u="cd .."
 alias tl="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
