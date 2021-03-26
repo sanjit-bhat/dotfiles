@@ -64,6 +64,10 @@ set shortmess+=I
 " Show line numbers.
 set number
 
+" Show x/y count when searching
+" at occurrence x out of y total occurrences
+set shortmess-=S
+
 " This enables relative line numbering mode. With both number and
 " relativenumber enabled, the current line shows the true line number, while
 " all other lines (above and below) are numbered relative to the current line.
