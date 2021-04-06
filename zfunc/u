@@ -1,3 +1,4 @@
+# Go up some number of directories
 if [ $# -eq 0 ]
 then
     cd ..
