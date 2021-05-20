@@ -27,13 +27,12 @@ autoload -Uz $fpath[1]/*(.:t)
 export EDITOR='vim'
 
 # Add aliases
-alias os="cd $HOME/Projects/cs-439h"
-alias law="cd $HOME/Projects/cs-395t"
-alias sec="cd $HOME/Projects/cs-378h"
-
+# Have sudo commands expand aliases
+alias sudo="sudo "
 alias v="vim"
 alias rg="rg -S"  # Smart case flag
 alias p="ipython"
+alias p3="python3"
 alias ctags="ctags -R -f ./.tags ."
 alias tl="tmux ls"
 alias tn="tmux new -s"
@@ -71,6 +70,9 @@ export PATH=~/.dotfiles/bin:${PATH}
 
 # Add Cargo to path
 export PATH=~/.cargo/bin:${PATH}
+
+# Add Dotnet to path
+export PATH=~/.dotnet/tools:${PATH}
 
 # Use Vim bindings in Zsh
 bindkey -v
