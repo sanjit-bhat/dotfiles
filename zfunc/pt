@@ -1,2 +1,2 @@
 # Run Python with traceback highlighting
-python $1 2>&1 | pygmentize -l py3tb
+python3 "$@" 2>&1 | pygmentize -l py3tb
