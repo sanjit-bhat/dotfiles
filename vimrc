@@ -105,6 +105,9 @@ nnoremap <leader>h <Esc>:noh<cr>
 nnoremap <leader>w <Esc>:w<cr>
 nnoremap <leader>q <Esc>:q<cr>
 
+" Apply ANSI escape formatting to emulate colorized terminal output
+nnoremap <leader>e <Esc>:AnsiEsc<cr>
+
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR>
 
