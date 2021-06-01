@@ -30,6 +30,7 @@ export EDITOR='vim'
 # Have sudo commands expand aliases
 alias sudo="sudo "
 alias v="vim"
+alias m="make"
 alias rg="rg -S"  # Smart case flag
 alias p="ipython"
 alias p3="python3"
