@@ -1,16 +1,7 @@
 #!/usr/bin/env sh
 
-# brew install pyenv
-
-VERSION="3.9.0"  # Use latest version here
-
 # Save previous installed packages
-pip list | awk '{print $1}' | tail -n +3 > reqs.txt
-
-# Install and switch to new Python version
-pyenv install $VERSION 
-pyenv global $VERSION
+# pip3 list | awk '{print $1}' | tail -n +3 > python_packages.txt
 
 # Install all of the previous packages
-cat reqs.txt | xargs -I {} pip install {}
-rm reqs.txt
+cat python_packages.txt | xargs -I {} pip3 install {}

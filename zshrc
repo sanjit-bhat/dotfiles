@@ -61,11 +61,6 @@ esac
 # Gtkwave for Verilog visualization
 alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
 
-# Use the pyenv version of Python
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 # Add dotfiles folder to path
 export PATH=~/.dotfiles/bin:${PATH}
 
