@@ -55,6 +55,7 @@ case `uname` in
   ;;
   Linux)
     alias ls="ls --color"
+    alias fd="fdfind"
   ;;
 esac
 
