@@ -1,4 +1,4 @@
-# Should be idempotent
+#!/usr/bin/env sh
 
 sudo apt upgrade
 
