@@ -2,11 +2,11 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Sanjit Bhat
-	email = sanjit.bhat@utexas.edu
+	email = sanjit.bhat@gmail.com
 [core]
 	autocrlf = input
 	editor = vim
-	excludesfile = /Users/sanjit/.gitignore
+	excludesfile = ~/.gitignore
 [color]
 	ui = true
 [branch]
@@ -15,3 +15,6 @@
     rebase = true
 [push]
 	default = tracking
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
