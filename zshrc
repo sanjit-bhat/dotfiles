@@ -52,10 +52,14 @@ alias gl="git log --all --graph --decorate"
 case `uname` in
   Darwin)
     alias ls="ls -G"
+    # Python binaries
+    export PATH=/usr/local/bin:${PATH}
   ;;
   Linux)
     alias ls="ls --color"
     alias fd="fdfind"
+    # Python binaries
+    export PATH=~/.local/bin:${PATH}
   ;;
 esac
 
