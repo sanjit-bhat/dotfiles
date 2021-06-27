@@ -3,6 +3,7 @@ import os
 
 key_type = 'ed25519'
 key_loc = f'~/.ssh/id_{key_type}'
+key_loc_pub = f'{key_loc}.pub'
 comp_name = 'computer-os'
 
 command = sys.argv[1]
@@ -13,4 +14,4 @@ if command == 'add_sys':
     os.system(f'ssh-add {key_loc}')
 
 if command == 'add_gh':
-    os.system(f'gh ssh-key add {key_loc} -t "{comp_name}"')
+    os.system(f'gh ssh-key add {key_loc_pub} -t "{comp_name}"')
