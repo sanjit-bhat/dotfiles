@@ -51,12 +51,12 @@ alias gl="git log --all --graph --decorate"
 # Conditional aliases depending on OS
 case `uname` in
   Darwin)
-    alias ls="ls -G"
+    alias l="ls -G"
     # Python binaries
     export PATH=/usr/local/bin:${PATH}
   ;;
   Linux)
-    alias ls="ls --color"
+    alias l="ls --color"
     alias fd="fdfind"
     # Python binaries
     export PATH=~/.local/bin:${PATH}
