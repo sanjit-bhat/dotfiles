@@ -19,6 +19,7 @@ mpmath
 numpy
 pandas
 piazza-api
+pre-commit
 pyasn1
 pycparser
 pycryptodome
