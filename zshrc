@@ -72,6 +72,9 @@ export PATH=~/.dotfiles/bin:${PATH}
 # Add Cargo to path
 export PATH=~/.cargo/bin:${PATH}
 
+# Add Go binaries to path
+export PATH=~/go/bin:${PATH}
+
 # Add Dotnet to path
 export PATH=~/.dotnet/tools:${PATH}
 
