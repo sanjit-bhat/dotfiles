@@ -54,12 +54,16 @@ case `uname` in
     alias ls="ls -G"
     # Python binaries
     export PATH=/usr/local/bin:${PATH}
+    # Open command
+    alias o="open"
   ;;
   Linux)
     alias ls="ls --color"
     alias fd="fdfind"
     # Python binaries
     export PATH=~/.local/bin:${PATH}
+    # Open command
+    alias o="gio open"
   ;;
 esac
 
