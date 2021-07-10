@@ -111,6 +111,9 @@ nnoremap <leader>e <Esc>:AnsiEsc<cr>
 " toggle relative numbering
 nnoremap <C-n> :set rnu!<CR>
 
+" Remap escape key in insert mode
+inoremap kj <Esc>
+
 " --------- Basic Editing Config ----------
 " Set up line breaks - wrap and linebreak enabled, and list disabled
 " Use gj, gk, g$, aand g^ for line break navigation
