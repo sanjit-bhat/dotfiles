@@ -3,6 +3,7 @@
 # Please adapt and uncomment the following lines:
 	name = Sanjit Bhat
 	email = sanjit.bhat@gmail.com
+	signingkey = 4F9D129D261ED638
 [core]
 	autocrlf = input
 	editor = vim
