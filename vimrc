@@ -17,6 +17,10 @@ set nocompatible
 " Turn on syntax highlighting.
 syntax on
 
+" Let Makefrag and .emu files use make syntax highlighing
+autocmd BufNewFile,BufRead Makefrag set syntax=make
+autocmd BufNewFile,BufRead *.emu set syntax=make
+
 " Search up parent directies until you find .tags file created by ctags
 " Use <C-]> to navigate to definition
 " Use <C-T> to go back
