@@ -47,6 +47,8 @@ alias gpl="git pull"
 alias gd="git diff"
 alias gr="git restore"
 alias gl="git log --all --graph --decorate"
+alias cl="git clone"
+alias gcp="git cherry-pick"
 
 # Conditional aliases depending on OS
 case `uname` in
