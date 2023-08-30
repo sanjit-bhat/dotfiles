@@ -104,11 +104,18 @@ vim.keymap.set('n', '<leader>fg', function() tel.live_grep() end)
 vim.keymap.set('n', '<leader>fb', function() tel.buffers() end)
 
 -- Misc key bindings.
+-- Write.
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
+-- Quit.
 vim.keymap.set('n', '<leader>q', '<cmd>q<cr>') 
+-- No highlight.
 vim.keymap.set('n', '<leader>h', '<cmd>noh<cr>') 
+-- Window switch.
+vim.keymap.set('n', '<leader>w', '<C-w>') 
+-- From insert mode to normal mode.
 vim.keymap.set('i', 'kj', '<Esc>')
 
--- Misc vim settings.
+-- Misc Vim settings.
 vim.wo.relativenumber = true
+-- Set Vim clipboard to be the system clipboard.
 vim.opt.clipboard = "unnamedplus"
