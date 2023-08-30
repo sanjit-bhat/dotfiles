@@ -101,6 +101,7 @@ require('telescope').load_extension('fzf')
 tel = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', function() tel.find_files() end)
 vim.keymap.set('n', '<leader>fg', function() tel.live_grep() end)
+vim.keymap.set('n', '<leader>fb', function() tel.buffers() end)
 
 -- Misc key bindings.
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
