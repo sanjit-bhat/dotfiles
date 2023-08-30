@@ -5,36 +5,34 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Support better colors in tmux
+# Support better colors in tmux.
 export TERM="xterm-256color"
 
-# ZSH Plugins
+# Zsh plugins.
 source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Autoload all ZSH functions in ~/.zfunc
-# -U disables alias expansion
-# z forces ZSH-style autoloading
+# Autoload all ZSH functions in ~/.zfunc.
+# -U disables alias expansion.
+# z forces ZSH-style autoloading.
 fpath=( ~/.zfunc "${fpath[@]}" )
 autoload -Uz $fpath[1]/*(.:t)
 
-# Enable z command to work properly
+# Make z cmd work.
 . ~/.z.sh
 
-# Set preferred editor for local and remote sessions
-export EDITOR='vim'
+# Set preferred editor for local and remote sessions.
+export EDITOR='nvim'
 
-# Add aliases
-# Have sudo commands expand aliases
+# Add aliases.
+# This lets sudo expand aliases.
 alias sudo="sudo "
-alias v="vim"
+alias v="nvim"
 alias m="make"
 alias rg="rg -S"  # Smart case flag
-alias p="ipython"
-alias p3="python3"
-alias ctags="ctags -R -f ./.tags ."
+alias p="python3"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
@@ -50,54 +48,73 @@ alias gl="git log --all --graph --decorate"
 alias cl="git clone"
 alias gcp="git cherry-pick"
 
-# Conditional aliases depending on OS
+# Conditional aliases depending on OS.
 case `uname` in
   Darwin)
     alias ls="ls -G"
-    # Python binaries
+    # Python binaries.
     export PATH=/usr/local/bin:${PATH}
-    # Open command
+    # Open command.
     alias o="open"
   ;;
   Linux)
     alias ls="ls --color"
     alias fd="fdfind"
-    # Python binaries
+    # Python binaries.
     export PATH=~/.local/bin:${PATH}
-    # Open command
+    # Open command.
     alias o="gio open"
   ;;
 esac
 
-# Gtkwave for Verilog visualization
-alias gtkwave="/Applications/gtkwave.app/Contents/Resources/bin/gtkwave"
+# Homebrew bins.
+export PATH=/opt/homebrew/bin:${PATH}
 
-# Add dotfiles folder to path
+# Dotfiles bins.
 export PATH=~/.dotfiles/bin:${PATH}
 
-# Add Cargo to path
+# Cargo bins.
 export PATH=~/.cargo/bin:${PATH}
 
-# Add Go binaries to path
+# Go bins.
 export PATH=~/go/bin:${PATH}
 
-# Add Dotnet to path
-export PATH=~/.dotnet/tools:${PATH}
-
-# Use Vim bindings in Zsh
+# Zsh Vim bindings.
 bindkey -v
 
-# Bind 'k' and 'j' to history search in Vim mode
+# Bind 'k' and 'j' to history search in Vim mode.
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-# Nvm - Manages node versions
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+# Ruby configs.
+eval "$(rbenv init - zsh)"
 
-# Haskell support
-[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+# Racket bins.
+export PATH=/Applications/Racket\ v8.6/bin/:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# Opam configs.
+[[ ! -r /Users/sanjit/.opam/opam-init/init.zsh ]] || source /Users/sanjit/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# Haskell configs.
+[ -f "/Users/sanjit/.ghcup/env" ] && source "/Users/sanjit/.ghcup/env" # ghcup-env
+
+# Private zshrc.
+source ~/.dotfiles/priv/zshrc

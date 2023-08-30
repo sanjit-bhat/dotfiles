@@ -1,14 +1,52 @@
 Host *
     ServerAliveInterval 60
-Host ut 
-    HostName cranium.cs.utexas.edu
-    User bhat
-    IdentityFile ~/.ssh/utlab
-Host big 
-    HostName the-professor.cs.utexas.edu
-    User bhat
-    IdentityFile ~/.ssh/utlab
 Host vm
-    HostName 172.16.132.2
+    HostName 172.16.132.129
     User sanjit
     IdentityFile ~/.ssh/id_rsa
+Host athena 
+    HostName athena.dialup.mit.edu
+    User sanjitb
+Host g.csail
+    User git
+    HostName g.csail.mit.edu
+    IdentityFile ~/.ssh/id_ed25519
+Host login.csail
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials yes
+    HostName login.csail.mit.edu
+    User sanjit-bhat
+Host ben.csail
+    User sanjit
+    HostName ben.csail.mit.edu
+    IdentityFile ~/.ssh/id_ed25519
+    ProxyJump login.csail
+Host 65660
+    User ubuntu
+    HostName 128.52.141.238
+    IdentityFile ~/.ssh/65660.pem
+Host 65660.fwd
+    User ubuntu
+    HostName 128.52.141.238
+    IdentityFile ~/.ssh/65660.pem
+    LocalForward 5001 localhost:5000
+    LocalForward 8443 localhost:8443
+Host 65660.vm
+    User student
+    HostName localhost
+    IdentityFile ~/.ssh/65660.pem
+    Port 2222
+    ProxyJump 65660
+Host 65660.vm.fwd
+    User ubuntu
+    HostName 128.52.141.238
+    IdentityFile ~/.ssh/65660.pem
+    LocalForward 8080 localhost:8080
+    LocalForward 5000 localhost:5000
+    LocalForward 8443 localhost:8443
+Host ben.vm
+    User student
+    HostName localhost
+    IdentityFile ~/.ssh/65660.pem
+    Port 2222
+    ProxyJump ben.csail

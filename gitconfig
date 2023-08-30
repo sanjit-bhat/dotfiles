@@ -3,7 +3,7 @@
 # Please adapt and uncomment the following lines:
 	name = Sanjit Bhat
 	email = sanjit.bhat@gmail.com
-	signingkey = 4F9D129D261ED638
+	signingkey = 1754B780A2D60068
 [core]
 	autocrlf = input
 	editor = vim
@@ -16,8 +16,7 @@
     rebase = true
 [push]
 	default = tracking
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = main
