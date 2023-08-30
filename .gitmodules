@@ -11,30 +11,9 @@
 [submodule "zsh/plugins/zsh-autosuggestions"]
 	path = zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
-[submodule "vim/pack/vendor/start/indentLine"]
-	path = vim/pack/vendor/start/indentLine
-	url = https://github.com/Yggdroot/indentLine.git
-[submodule "vim/pack/vendor/start/rust.vim"]
-	path = vim/pack/vendor/start/rust.vim
-	url = https://github.com/rust-lang/rust.vim.git
-[submodule "vim/pack/vendor/start/syntastic"]
-	path = vim/pack/vendor/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "vim/pack/vendor/start/vim-markdown-preview"]
-	path = vim/pack/vendor/start/vim-markdown-preview
-	url = https://github.com/JamshedVesuna/vim-markdown-preview.git
-[submodule "vim/pack/vendor/start/vim-polyglot"]
-	path = vim/pack/vendor/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot
-[submodule "vim/pack/vendor/start/vim-fugitive"]
-	path = vim/pack/vendor/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
 [submodule "zsh/plugins/zsh-history-substring-search"]
 	path = zsh/plugins/zsh-history-substring-search
 	url = https://github.com/zsh-users/zsh-history-substring-search.git
 [submodule "tmux/plugins/tmux-resurrect"]
 	path = tmux/plugins/tmux-resurrect
 	url = https://github.com/tmux-plugins/tmux-resurrect
-[submodule "vim/pack/vendor/start/vim-plugin-AnsiEsc"]
-	path = vim/pack/vendor/start/vim-plugin-AnsiEsc
-	url = https://github.com/powerman/vim-plugin-AnsiEsc.git
