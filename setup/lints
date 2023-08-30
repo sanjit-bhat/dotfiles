@@ -25,13 +25,11 @@ echo 'Installing lints through pip'
 # cmakelint -> Cmake
 # proselint -> Tex/Latex/Markdown/Text
 # pylint -> Python
-# vim-vint -> Vim
 # yamllint -> YAML
 pip install \
     cmakelint \
     proselint \
     pylint \
-    vim-vint \
     yamllint
 
 echo 'JavaScript Lint'
