@@ -21,32 +21,3 @@ Host ben.csail
     HostName ben.csail.mit.edu
     IdentityFile ~/.ssh/id_ed25519
     ProxyJump login.csail
-Host 65660
-    User ubuntu
-    HostName 128.52.141.238
-    IdentityFile ~/.ssh/65660.pem
-Host 65660.fwd
-    User ubuntu
-    HostName 128.52.141.238
-    IdentityFile ~/.ssh/65660.pem
-    LocalForward 5001 localhost:5000
-    LocalForward 8443 localhost:8443
-Host 65660.vm
-    User student
-    HostName localhost
-    IdentityFile ~/.ssh/65660.pem
-    Port 2222
-    ProxyJump 65660
-Host 65660.vm.fwd
-    User ubuntu
-    HostName 128.52.141.238
-    IdentityFile ~/.ssh/65660.pem
-    LocalForward 8080 localhost:8080
-    LocalForward 5000 localhost:5000
-    LocalForward 8443 localhost:8443
-Host ben.vm
-    User student
-    HostName localhost
-    IdentityFile ~/.ssh/65660.pem
-    Port 2222
-    ProxyJump ben.csail
