@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugin includes.
 require('lazy').setup({
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'sainnhe/gruvbox-material', priority = 1000 },
   'whonore/Coqtail',
   'joom/latex-unicoder.vim',
   { 'nvim-telescope/telescope.nvim',
@@ -28,13 +28,8 @@ require('lazy').setup({
   },
 })
 
--- Plugin: catppuccin (colorscheme).
-vim.g.catppuccin_flavour = 'macchiato'
-require('catppuccin').setup({
-  flavour = 'macchiato',
-  show_end_of_buffer = 'true',
-})
-vim.cmd([[colorscheme catppuccin]])
+-- Plugin: gruvbox-material (colorscheme).
+vim.cmd([[colorscheme gruvbox-material]])
 
 -- Plugin: Coqtail (Coq).
 -- Default maps leader keys in insert mode, which slows down normal leader typing.
