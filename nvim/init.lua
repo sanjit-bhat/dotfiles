@@ -9,7 +9,7 @@ if not vim.loop.fs_stat(lazypath) then
     'clone',
     '--filter=blob:none',
     'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable', -- latest stable release
+    '--branch=stable',
     lazypath,
   })
 end
@@ -107,11 +107,11 @@ vim.keymap.set('n', '<leader>fb', function() tel.buffers() end)
 -- Write.
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
 -- Quit.
-vim.keymap.set('n', '<leader>q', '<cmd>q<cr>') 
+vim.keymap.set('n', '<leader>q', '<cmd>q<cr>')
 -- No highlight.
-vim.keymap.set('n', '<leader>h', '<cmd>noh<cr>') 
+vim.keymap.set('n', '<leader>h', '<cmd>noh<cr>')
 -- Window switch.
-vim.keymap.set('n', '<leader>w', '<C-w>') 
+vim.keymap.set('n', '<leader>w', '<C-w>')
 -- From insert mode to normal mode.
 vim.keymap.set('i', 'kj', '<Esc>')
 
@@ -119,3 +119,17 @@ vim.keymap.set('i', 'kj', '<Esc>')
 vim.wo.relativenumber = true
 -- Set Vim clipboard to be the system clipboard.
 vim.opt.clipboard = "unnamedplus"
+vim.o.ignorecase  = true
+vim.o.smartcase   = true
+vim.o.smarttab    = true
+vim.o.smartindent = true
+-- Start new horizontal split below current.
+vim.o.splitbelow  = true
+-- Start new vertical split to the right of current.
+vim.o.splitright  = true
+vim.o.expandtab   = true
+vim.o.tabstop     = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth  = 4
+-- Make trailing line spaces display as a "-".
+vim.opt.list = true
