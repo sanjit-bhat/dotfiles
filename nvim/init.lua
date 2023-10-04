@@ -67,6 +67,15 @@ vim.keymap.set('n', '<leader>h', '<cmd>noh<cr>')
 vim.keymap.set('n', '<leader>w', '<C-w>')
 -- From insert mode to normal mode.
 vim.keymap.set('i', 'kj', '<Esc>')
+-- On term open, go to insert mode so we can start running cmds.
+vim.api.nvim_create_autocmd({'TermOpen'}, {
+  pattern = {'*'},
+  command = 'startinsert',
+})
+-- New horizontal term.
+vim.keymap.set('n', '<leader>th', '<cmd>split term://zsh<cr>')
+-- New vertical term.
+vim.keymap.set('n', '<leader>tv', '<cmd>vsplit term://zsh<cr>')
 
 -- Misc Vim settings.
 vim.wo.relativenumber = true
