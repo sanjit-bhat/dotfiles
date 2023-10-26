@@ -57,14 +57,8 @@ vim.keymap.set('n', '<leader>fg', function() tel.live_grep() end)
 vim.keymap.set('n', '<leader>fb', function() tel.buffers() end)
 
 -- Misc key bindings.
--- Write.
-vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
--- Quit.
-vim.keymap.set('n', '<leader>q', '<cmd>q<cr>')
 -- No highlight.
 vim.keymap.set('n', '<leader>h', '<cmd>noh<cr>')
--- Window switch.
-vim.keymap.set('n', '<leader>w', '<C-w>')
 -- From insert mode to normal mode.
 vim.keymap.set('i', 'kj', '<Esc>')
 -- On term open, go to insert mode so we can start running cmds.
@@ -76,6 +70,8 @@ vim.api.nvim_create_autocmd({'TermOpen'}, {
 vim.keymap.set('n', '<leader>th', '<cmd>split term://zsh<cr>')
 -- New vertical term.
 vim.keymap.set('n', '<leader>tv', '<cmd>vsplit term://zsh<cr>')
+-- Window switch.
+vim.keymap.set('n', '<leader>w', '<C-w>')
 
 -- Misc Vim settings.
 vim.wo.relativenumber = true
