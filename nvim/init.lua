@@ -29,7 +29,7 @@ require('lazy').setup({
   -- Coq support.
   'whonore/Coqtail',
   -- Unicode symbol input with latex commands.
-  'joom/latex-unicoder.vim',
+  { 'whatever/latex-unicoder.vim', dev = true },
   -- Fuzzy file/buffer/word finder.
   {
     'nvim-telescope/telescope.nvim',

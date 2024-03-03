@@ -1,10 +1,12 @@
 -- Default maps leader keys in insert mode, which slows down normal leader typing.
 vim.g.coqtail_noimap = 1
 -- Get rid of distracting CoqtailChecked bg highlight until I can find a better color.
+--[[
 normal_bg = vim.api.nvim_get_hl(0, { name = 'Normal' }).bg
 coq_hi_desc = vim.api.nvim_get_hl(0, { name = 'CoqtailChecked' })
 coq_hi_desc.bg = normal_bg
 vim.api.nvim_set_hl(0, 'CoqtailChecked', coq_hi_desc)
+]]
 
 -- Plugin: latex-unicoder.vim (tex unicode).
 -- Note: Std Latex symbs already exist in the package.
@@ -65,4 +67,5 @@ iris['->']         = '→'
 iris['<->']        = '↔'
 iris['<-']         = '←'
 iris['\\notequiv'] = '≢'
+iris['equiv']      = '⊣⊢'
 vim.g.unicode_map  = iris
