@@ -14,9 +14,8 @@ lspconfig.gopls.setup {}
 lspconfig.rust_analyzer.setup {
   settings = {
     ['rust-analyzer'] = {
-      cargo = {
-        -- Tell cargo to analyze all features. Prevents dead code warnings.
-        features = "all";
+      diagnostics = {
+        disabled = { 'inactive-code' }
       }
     }
   }
