@@ -93,3 +93,5 @@ vim.o.softtabstop = 4
 vim.o.shiftwidth  = 4
 -- Make trailing line spaces display as a '-'.
 vim.opt.list = true
+-- Color a recommended column width.
+vim.opt.colorcolumn = "80"
