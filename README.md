@@ -6,6 +6,9 @@ Steps for setting up the dev environment:
 1. Clone this repo
 1. Run `./install` to link everything and automatically clone the submodules
 1. Optional
+    1. For Linux, `setup/linux` is an experimental script that can
+    be run on a barebones machine and does the precursor setup
+    (i.e., installing zsh) before running `./install`.
     1. Install the `MesloLGF NF` font linked
     [here](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k)
     1. Load up `ITerm2` and apply the `ITerm-Powerlevel10k.json` config file in this repo as the default config.
