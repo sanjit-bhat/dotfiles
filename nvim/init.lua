@@ -23,6 +23,7 @@ require('lazy').setup({
     priority = 1000,
     lazy = false,
     config = function()
+      -- My env doesn't support italics.
       vim.g.gruvbox_material_disable_italic_comment = 1
       vim.cmd.colorscheme('gruvbox-material')
     end,
