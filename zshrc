@@ -33,6 +33,8 @@ alias v="nvim"
 alias m="make"
 alias rg="rg -S"  # Smart case flag
 alias p="python3"
+alias python="python3"
+alias pip="pip3"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
@@ -95,26 +97,14 @@ export PATH=/Applications/Racket\ v8.6/bin/:$PATH
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/sanjit/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/sanjit/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/sanjit/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/sanjit/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # Opam configs.
 [[ ! -r /Users/sanjit/.opam/opam-init/init.zsh ]] || source /Users/sanjit/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # Haskell configs.
 [ -f "/Users/sanjit/.ghcup/env" ] && source "/Users/sanjit/.ghcup/env" # ghcup-env
+
+# Default to standard Python venv.
+source ~/py-venv/std/bin/activate
 
 # Private zshrc.
 source ~/.dotfiles/priv/zshrc
