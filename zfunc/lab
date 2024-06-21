@@ -1,0 +1,3 @@
+# Re-arrange displays for my lab monitor config.
+# Using: https://github.com/jakehilborn/displayplacer.
+displayplacer "id:3 res:1920x1080 hz:60 color_depth:8 enabled:true scaling:off origin:(0,0) degree:0" "id:2 res:1920x1080 hz:60 color_depth:8 enabled:true scaling:off origin:(-1920,0) degree:0"
