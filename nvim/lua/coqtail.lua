@@ -68,4 +68,5 @@ iris['<->']        = '↔'
 iris['<-']         = '←'
 iris['\\notequiv'] = '≢'
 iris['equiv']      = '⊣⊢'
+iris['in']         = '↪'
 vim.g.unicode_map  = iris
