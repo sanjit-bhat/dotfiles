@@ -5,9 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Support better colors in tmux.
-export TERM="xterm-256color"
-
 # Zsh plugins.
 source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -90,9 +87,6 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 # Ruby configs.
 eval "$(rbenv init - zsh)"
-
-# Racket bins.
-export PATH=/Applications/Racket\ v8.6/bin/:$PATH
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
