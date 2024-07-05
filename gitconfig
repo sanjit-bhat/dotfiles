@@ -1,6 +1,4 @@
-# This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
 	name = Sanjit Bhat
 	email = sanjit.bhat@gmail.com
 	signingkey = /Users/sanjit/.ssh/id_ed25519.pub
