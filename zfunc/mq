@@ -1,0 +1,3 @@
+# Create a PR for the current branch and immediately merge.
+gh pr create --fill
+gh pr merge --auto --merge --delete-branch
