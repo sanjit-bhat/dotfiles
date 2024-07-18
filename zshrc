@@ -35,17 +35,7 @@ alias pip="pip3"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
-
-alias gg="git status"
-alias ga="git add"
-alias gc="git commit -m"
-alias gp="git push"
-alias gpl="git pull"
-alias gd="git diff"
-alias gr="git restore"
-alias gl="git log --all --graph --decorate"
-alias cl="git clone"
-alias gcp="git cherry-pick"
+alias g="git"
 
 # Conditional aliases depending on OS.
 case `uname` in

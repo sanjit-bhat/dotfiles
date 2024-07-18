@@ -20,3 +20,17 @@
 	defaultBranch = main
 [gpg]
 	format = ssh
+[alias]
+	co = checkout
+	br = branch -v
+	ci = commit
+	ss = status
+	st = stash
+	ad = add
+	lg = log --all --graph --decorate --name-only
+	pu = push
+	pl = pull
+	df = diff
+	cl = clone
+	rb = rebase
+	lt = log -1 HEAD
