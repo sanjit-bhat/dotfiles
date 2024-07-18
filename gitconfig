@@ -33,4 +33,5 @@
 	df = diff
 	cl = clone
 	rb = rebase
+	sm = submodule
 	lt = log -1 HEAD
