@@ -118,7 +118,3 @@ vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 -- Keep tabs as tabs, not spaces. Especially useful for Golang.
 vim.opt.expandtab = false
--- Smart tab screws up often, mistakenly adding idents.
--- E.g., in a Coq comment, I'll write `foo-bar` and it'll mis-interpret
--- the "dash" and indent the line.
-vim.opt.smarttab = false
