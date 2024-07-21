@@ -71,7 +71,7 @@ vim.keymap.set('n', '<leader>th', '<cmd>split term://zsh<cr>')
 -- New vertical term.
 vim.keymap.set('n', '<leader>tv', '<cmd>vsplit term://zsh<cr>')
 -- Window switch.
-vim.keymap.set('n', '<leader>w', '<C-w>')
+vim.keymap.set('n', '<leader>f', '<C-w>')
 -- Make j and k move by visual line, not actual line, when text is soft-wrapped.
 vim.keymap.set('n', 'j', 'gj')
 vim.keymap.set('n', 'k', 'gk')
@@ -88,6 +88,8 @@ vim.keymap.set('c', '<C-k>', '<Esc>')
 vim.keymap.set('o', '<C-k>', '<Esc>')
 vim.keymap.set('l', '<C-k>', '<Esc>')
 vim.keymap.set('t', '<C-k>', '<Esc>')
+-- Quick-save.
+vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
 
 -- Misc Vim settings.
 -- Relative line numbers.
