@@ -88,6 +88,8 @@ vim.keymap.set('c', '<C-k>', '<Esc>')
 vim.keymap.set('o', '<C-k>', '<Esc>')
 vim.keymap.set('l', '<C-k>', '<Esc>')
 vim.keymap.set('t', '<C-k>', '<Esc>')
+-- Disable Esc so I'm forced to not use it.
+vim.keymap.set('i', '<Esc>', '<nop>')
 -- Quick-save.
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
 
