@@ -35,4 +35,4 @@
 	rb = rebase
 	sm = submodule
 	re = remote
-	lt = log -1 HEAD
+	rt = restore
