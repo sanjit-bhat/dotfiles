@@ -1,23 +1,38 @@
 Host *
     ServerAliveInterval 60
-Host vm
-    HostName 172.16.132.129
-    User sanjit
-    IdentityFile ~/.ssh/id_rsa
-Host athena 
-    HostName athena.dialup.mit.edu
-    User sanjitb
+Host github
+    User git
+    HostName github.com
 Host g.csail
     User git
     HostName g.csail.mit.edu
-    IdentityFile ~/.ssh/id_ed25519
-Host login.csail
+Host login
+    User sanjit-bhat
+    HostName login.csail.mit.edu
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials yes
-    HostName login.csail.mit.edu
+Host jump
     User sanjit-bhat
-Host ben.csail
+    HostName jump.csail.mit.edu
+    GSSAPIAuthentication yes
+Host ben
     User sanjit
     HostName ben.csail.mit.edu
-    IdentityFile ~/.ssh/id_ed25519
-    ProxyJump login.csail
+    ProxyJump login
+Host 6828
+    User arch
+    HostName vm-6828.pdos.csail.mit.edu
+    ProxyJump jump
+Host churro
+    User sanjit
+    HostName localhost
+    Port 22022
+Host jf2
+    User zain
+    HostName jf2.csail.mit.edu
+    Port 222
+Host sr
+    User sanjit
+    HostName sr03.csail.mit.edu
+    ProxyJump jf2
+    ForwardAgent yes
