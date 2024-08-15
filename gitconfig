@@ -28,7 +28,11 @@
     cl = clone
     co = checkout
     df = diff
-    lg = log --all --graph --decorate --name-only
+    # format: "<hash>|<date>|<committer>|<title>".
+    # there's a bug that results in spurious vert bars at line ends.
+    # i can't find a way to fix it while still preserving these things:
+    # 1) custom format, 2) file names, 3) graph view.
+    lg = log --all --graph --name-only --pretty="format:%C(auto)%h|%as|%cn|%s"
     pl = pull
     pu = push
     rb = rebase
