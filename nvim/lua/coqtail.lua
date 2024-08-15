@@ -3,6 +3,8 @@ vim.g.coqtail_noimap = 1
 -- Auto-indenting within comments is buggy.
 -- E.g., writing "foo-bar" will trigger an indent bc of faulty "dash" interp.
 vim.g.coqtail_noindent_comment = 1
+-- Iris has a dune config, but it's buggy, so default to CoqProject.
+vim.g.coqtail_build_system = 'prefer-coqproject'
 
 -- Plugin: latex-unicoder.vim (tex unicode).
 -- Note: Std Latex symbs already exist in the package.
