@@ -1,38 +1,39 @@
 [user]
-	name = Sanjit Bhat
-	email = sanjit.bhat@gmail.com
-	signingkey = ~/.ssh/id_ed25519.pub
+    name = Sanjit Bhat
+    email = sanjit.bhat@gmail.com
+    signingkey = ~/.ssh/id_ed25519.pub
 [core]
-	autocrlf = input
-	editor = vim
-	excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = nvim
+    excludesfile = ~/.gitignore
 [color]
-	ui = true
+    ui = true
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [pull]
     rebase = true
 [push]
-	default = tracking
+    default = tracking
+    autoSetupRemote = true
 [commit]
-	gpgsign = true
+    gpgsign = true
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [gpg]
-	format = ssh
+    format = ssh
 [alias]
-	co = checkout
-	br = branch -v
-	ci = commit
-	ss = status
-	st = stash
-	ad = add
-	lg = log --all --graph --decorate --name-only
-	pu = push
-	pl = pull
-	df = diff
-	cl = clone
-	rb = rebase
-	sm = submodule
-	re = remote
-	rt = restore
+    ad = add
+    br = branch -v
+    ci = commit
+    cl = clone
+    co = checkout
+    df = diff
+    lg = log --all --graph --decorate --name-only
+    pl = pull
+    pu = push
+    rb = rebase
+    ro = remote
+    rt = restore
+    sm = submodule
+    ss = status
+    st = stash
