@@ -118,5 +118,5 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 -- Number of spaces that a <Tab> in the file counts for.
 vim.opt.tabstop = 4
--- Keep tabs as tabs, not spaces. Especially useful for Golang.
-vim.opt.expandtab = false
+-- Convert tabs to spaces in the source itself.
+vim.opt.expandtab = true
