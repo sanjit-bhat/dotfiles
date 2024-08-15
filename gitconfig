@@ -28,8 +28,8 @@
     cl = clone
     co = checkout
     df = diff
-    # format: "<hash><branch>|<date>|<committer>|<title><newline>".
-    lg = log --all --graph --name-only --pretty='format:%C(auto)%h%(decorate:prefix=,suffix=,tag=,separator= )|%as|%cn|%s%n'
+    # format: "<hash><branch>|<date>|<committer>|<title>".
+    lg = log --all --graph --name-only --format='%C(auto)%h%d|%as|%cn|%s'
     pl = pull
     pu = push
     rb = rebase
