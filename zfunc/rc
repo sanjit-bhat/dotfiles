@@ -1,4 +1,0 @@
-# Compile C program and run executable
-if `gcc -o $1 $1.c`; then
-    ./$1
-fi
