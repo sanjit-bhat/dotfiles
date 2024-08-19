@@ -1,0 +1,21 @@
+# this script runs a command and notifies after it finishes.
+# useful for long-running commands.
+
+# Check if a command is passed as an argument
+if [ $# -eq 0 ]; then
+    echo "Usage: notify <command>"
+    exit 1
+fi
+
+# Capture the command for notification title
+command_str="$@"
+
+# Run the command passed as arguments
+"$@"
+exit_code=$?
+
+# Send notification with the command and error code
+/usr/bin/osascript -e "display notification \"err: $exit_code\" with title \"$command_str\" sound name \"Bottle\""
+
+# Exit with the original command's exit code
+exit $exit_code
