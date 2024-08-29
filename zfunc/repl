@@ -1,2 +1,3 @@
-# find and replace using a sed expression.
-fd '.' --type file --exec gsed --in-place $1 {}
+# find and replace. e.g., repl foo bar.
+expr="s/"$1"/"$2"/g"
+fd . --type file --exec gsed --in-place $expr {}
