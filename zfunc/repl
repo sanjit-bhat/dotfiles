@@ -1,0 +1,2 @@
+# find and replace using a sed expression.
+fd '.' --type file --exec gsed --in-place $1 {}
