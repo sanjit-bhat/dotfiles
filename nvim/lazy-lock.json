@@ -1,5 +1,6 @@
 {
   "Coqtail": { "branch": "main", "commit": "c1dc30666c957815b012ae67e8e61de6b48ecf86" },
+  "gen.nvim": { "branch": "main", "commit": "0be6ca0cdfe45a7b6537cbf41bd22a420c05be85" },
   "gruvbox-material": { "branch": "master", "commit": "91f8170a31ae6e31670629cd339df297dbd5fd5f" },
   "lazy.nvim": { "branch": "main", "commit": "c92c6b5fd2b3a13c8999ab8379e43a79c9406e59" },
   "nvim-lspconfig": { "branch": "master", "commit": "df9c116cbcf0aa7e58f2b36b0296fa687e87f36f" },

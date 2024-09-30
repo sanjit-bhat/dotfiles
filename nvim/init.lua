@@ -4,46 +4,53 @@ vim.g.mapleader = ' '
 -- Bootstrap package manager.
 local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    'git',
-    'clone',
-    '--filter=blob:none',
-    'https://github.com/folke/lazy.nvim.git',
-    '--branch=stable',
-    lazypath,
-  })
+    vim.fn.system({
+        'git',
+        'clone',
+        '--filter=blob:none',
+        'https://github.com/folke/lazy.nvim.git',
+        '--branch=stable',
+        lazypath,
+    })
 end
 vim.opt.rtp:prepend(lazypath)
 
 -- Plugin includes.
 require('lazy').setup({
-  -- Colorscheme.
-  {
-    'sainnhe/gruvbox-material',
-    priority = 1000,
-    lazy = false,
-    config = function()
-      -- My env doesn't support italics.
-      vim.g.gruvbox_material_disable_italic_comment = 1
-      vim.cmd.colorscheme('gruvbox-material')
-    end,
-  },
-  -- Coq support.
-  'whonore/Coqtail',
-  -- Unicode symbol input with latex commands.
-  { 'whatever/latex-unicoder.vim', dev = true },
-  -- Fuzzy file/buffer/word finder.
-  {
-    'nvim-telescope/telescope.nvim',
-    dependencies = {
-      -- Required telescope.vim dep. Helper module for async lua.
-      'nvim-lua/plenary.nvim',
-      -- Optional telescope.vim dep. Fast fuzzy sorting.
-      { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    -- Colorscheme.
+    {
+        'sainnhe/gruvbox-material',
+        priority = 1000,
+        lazy = false,
+        config = function()
+            -- My env doesn't support italics.
+            vim.g.gruvbox_material_disable_italic_comment = 1
+            vim.cmd.colorscheme('gruvbox-material')
+        end,
     },
-  },
-  -- Sensible default configs for most LSP servers.
-  'neovim/nvim-lspconfig',
+    -- Coq support.
+    'whonore/Coqtail',
+    -- Unicode symbol input with latex commands.
+    { 'whatever/latex-unicoder.vim', dev = true },
+    -- Fuzzy file/buffer/word finder.
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = {
+            -- Required telescope.vim dep. Helper module for async lua.
+            'nvim-lua/plenary.nvim',
+            -- Optional telescope.vim dep. Fast fuzzy sorting.
+            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+        },
+    },
+    -- Sensible default configs for most LSP servers.
+    'neovim/nvim-lspconfig',
+    -- Experimental LLM support.
+    {
+        'David-Kunz/gen.nvim',
+        opts = {
+            model = 'llama3.2',
+        },
+    },
 })
 
 -- Some plugins need a lot of config, so move those to sep modules.
@@ -63,8 +70,8 @@ vim.keymap.set('n', '<leader>fb', function() tel.buffers() end)
 vim.keymap.set('n', '<leader>h', '<cmd>noh<cr>')
 -- On term open, go to insert mode so we can start running cmds.
 vim.api.nvim_create_autocmd({'TermOpen'}, {
-  pattern = {'*'},
-  command = 'startinsert',
+    pattern = {'*'},
+    command = 'startinsert',
 })
 -- New horizontal term.
 vim.keymap.set('n', '<leader>th', '<cmd>split term://zsh<cr>')
