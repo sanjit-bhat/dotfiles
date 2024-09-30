@@ -36,6 +36,7 @@ alias tl="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias g="git"
+alias wifi="ping google.com"
 
 # Conditional aliases depending on OS.
 case `uname` in
