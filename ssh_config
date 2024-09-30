@@ -36,3 +36,7 @@ Host sr
     HostName sr03.csail.mit.edu
     ProxyJump jf2
     ForwardAgent yes
+Host vm-web
+    User arch
+    HostName vm-web.pdos.csail.mit.edu
+    ProxyJump login
