@@ -19,6 +19,9 @@
     ~/.zfunc:
     ~/.zsh:
     ~/.zshrc:
+    ~/Library/LaunchAgents:
+      glob: true
+      path: launchd/*
 
 - create:
 

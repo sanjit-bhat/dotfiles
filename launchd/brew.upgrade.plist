@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>brew.upgrade</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/sanjit/.dotfiles/bin/brew_upgrade</string>
+  </array>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <!-- 4am on monday. -->
+    <key>Hour</key>
+    <integer>4</integer>
+    <key>Day</key>
+    <integer>1</integer>
+  </dict>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/sanjit/Library/Logs/brew.upgrade.err</string>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/brew.upgrade.out</string>
+</dict>
+</plist>
