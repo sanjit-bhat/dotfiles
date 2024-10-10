@@ -1,0 +1,2 @@
+# git checkout by date. e.g., `gcod 2024-10-01`.
+git checkout `git rev-list -n 1 --first-parent --before="$1" HEAD`
