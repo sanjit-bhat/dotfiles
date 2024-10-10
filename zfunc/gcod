@@ -1,2 +1,3 @@
 # git checkout by date. e.g., `gcod 2024-10-01`.
-git checkout `git rev-list -n 1 --first-parent --before="$1" HEAD`
+branch=`git remote show origin | sed -n "/HEAD branch/s/.*: //p"`
+git checkout `git rev-list -n 1 --first-parent --before="$1" "$branch"`
