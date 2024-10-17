@@ -59,6 +59,7 @@ esac
 
 # Homebrew bins.
 export PATH=/opt/homebrew/bin:${PATH}
+export PATH=/opt/homebrew/sbin:${PATH}
 
 # Dotfiles bins.
 export PATH=~/.dotfiles/bin:${PATH}
