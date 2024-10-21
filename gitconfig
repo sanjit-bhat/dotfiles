@@ -37,5 +37,6 @@
     rt = restore
     rts = restore --staged
     sm = submodule
+    smu = submodule update --recursive
     ss = status
     st = stash
