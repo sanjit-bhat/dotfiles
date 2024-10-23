@@ -1,21 +1,12 @@
-# this script runs a command and notifies after it finishes.
-# useful for long-running commands.
+# notify executes a long-running command and issues a system notification
+# after it finishes. e.g., `notify sleep 10`.
 
-# Check if a command is passed as an argument
-if [ $# -eq 0 ]; then
-    echo "Usage: notify <command>"
-    exit 1
-fi
-
-# Capture the command for notification title
+# capture cmd for notification title.
 command_str="$@"
 
-# Run the command passed as arguments
+# run cmd.
 "$@"
 exit_code=$?
 
-# Send notification with the command and error code
+# send notification with cmd and err code.
 /usr/bin/osascript -e "display notification \"err: $exit_code\" with title \"$command_str\" sound name \"Bottle\""
-
-# Exit with the original command's exit code
-exit $exit_code
