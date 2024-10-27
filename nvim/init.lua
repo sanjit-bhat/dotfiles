@@ -127,3 +127,5 @@ vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 -- Convert tabs to spaces in the source itself.
 vim.opt.expandtab = true
+-- No swap files. I almost never have faults where I need to recover files.
+vim.opt.swapfile = false
