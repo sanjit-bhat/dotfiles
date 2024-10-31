@@ -37,6 +37,6 @@
     rt = restore
     rts = restore --staged
     sm = submodule
-    smu = submodule update --recursive
     ss = status
     st = stash
+    upd = !git stash && git pull && git submodule update --recursive && git stash pop
