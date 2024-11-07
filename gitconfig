@@ -30,6 +30,7 @@
     df = diff
     # format: "<hash><branch>|<date>|<committer>|<title>".
     lg = log --all --graph --name-only --format='%C(auto)%h%d|%as|%cn|%s'
+    lt = show HEAD
     pl = pull
     pu = push
     rb = rebase
