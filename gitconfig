@@ -6,6 +6,7 @@
     autocrlf = input
     editor = nvim
     excludesfile = ~/.gitignore
+    pager = delta
 [color]
     ui = true
 [branch]
@@ -41,3 +42,15 @@
     ss = status
     st = stash
     upd = !git stash && git pull && git submodule update --recursive && git stash pop
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    # use n and N to move between diff sections.
+    navigate = true
+    line-numbers = true
+    hyperlinks = true
+[merge]
+    conflictstyle = zdiff3
+[diff]
+    # detect moved blocks of code and style them differently.
+    colorMoved = default

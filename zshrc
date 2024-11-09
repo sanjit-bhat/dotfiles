@@ -37,6 +37,8 @@ alias tn="tmux new -s"
 alias ta="tmux attach -t"
 alias g="git"
 alias wifi="ping google.com"
+# make `less` preserve colors.
+alias less="less --raw-control-chars"
 
 # Conditional aliases depending on OS.
 case `uname` in
