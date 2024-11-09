@@ -38,6 +38,7 @@
     ro = remote
     rt = restore
     rts = restore --staged
+    sh = show
     sm = submodule
     ss = status
     st = stash
