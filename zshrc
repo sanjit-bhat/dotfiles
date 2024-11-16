@@ -28,7 +28,6 @@ export EDITOR='nvim'
 alias sudo="sudo "
 alias v="nvim"
 alias m="make"
-alias rg="rg -S"  # Smart case flag
 alias p="python3"
 alias python="python3"
 alias pip="pip3"
