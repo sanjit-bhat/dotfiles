@@ -9,6 +9,9 @@ Host g.csail
 Host login
     User sanjit-bhat
     HostName login.csail.mit.edu
+    # login.csail pk is in DNS record. check against that.
+    VerifyHostKeyDNS ask
+    # use kerb auth.
     GSSAPIAuthentication yes
     GSSAPIDelegateCredentials yes
 Host jump
