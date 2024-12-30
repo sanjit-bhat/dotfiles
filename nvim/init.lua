@@ -129,3 +129,6 @@ vim.opt.tabstop = 4
 vim.opt.expandtab = true
 -- No swap files. I almost never have faults where I need to recover files.
 vim.opt.swapfile = false
+-- Merge "sign" column (i.e., where LSP errors show) with "number" column.
+-- This also fixes sign column oscillation with repeated error checking.
+vim.opt.signcolumn = "number"
