@@ -10,7 +10,9 @@ to nvim-lspconfig.
 
 -- Setting up all the LSPs.
 local lspconfig = require('lspconfig')
+-- Golang.
 lspconfig.gopls.setup {}
+-- Rust.
 lspconfig.rust_analyzer.setup {
     settings = {
         ['rust-analyzer'] = {
@@ -19,6 +21,23 @@ lspconfig.rust_analyzer.setup {
             }
         }
     }
+}
+-- Python formatting.
+lspconfig.ruff.setup {}
+-- Python. see https://docs.astral.sh/ruff/editors/setup/#neovim.
+lspconfig.pyright.setup {
+    settings = {
+        pyright = {
+            -- Using Ruff's import organizer
+            disableOrganizeImports = true,
+        },
+        python = {
+            analysis = {
+                -- Ignore all files for analysis to exclusively use Ruff for linting
+                ignore = { '*' },
+            },
+        },
+    },
 }
 
 -- Global mappings.
