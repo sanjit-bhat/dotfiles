@@ -1,13 +1,3 @@
---[[
-Note: currently, most of this is copied from the
-nvim-lspconfig readme.
-At some point, I should look into:
-- williamboman/mason.nvim: downloading LSP servers,
-- williamboman/mason-lspconfig.nvim: connecting mason.nvim
-to nvim-lspconfig.
-- hrsh7th/nvim-cmp: autocomplete plugin.
-]]
-
 -- Setting up all the LSPs.
 local lspconfig = require('lspconfig')
 -- Golang.
@@ -22,23 +12,10 @@ lspconfig.rust_analyzer.setup {
         }
     }
 }
--- Python formatting.
+-- Python formatting and linting.
 lspconfig.ruff.setup {}
--- Python. see https://docs.astral.sh/ruff/editors/setup/#neovim.
-lspconfig.pyright.setup {
-    settings = {
-        pyright = {
-            -- Using Ruff's import organizer
-            disableOrganizeImports = true,
-        },
-        python = {
-            analysis = {
-                -- Ignore all files for analysis to exclusively use Ruff for linting
-                ignore = { '*' },
-            },
-        },
-    },
-}
+-- Python.
+lspconfig.pyright.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
