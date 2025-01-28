@@ -44,13 +44,6 @@ require('lazy').setup({
     },
     -- Sensible default configs for most LSP servers.
     'neovim/nvim-lspconfig',
-    -- Experimental LLM support.
-    {
-        'David-Kunz/gen.nvim',
-        opts = {
-            model = 'llama3.2',
-        },
-    },
 })
 
 -- Some plugins need a lot of config, so move those to sep modules.
