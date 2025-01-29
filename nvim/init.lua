@@ -95,7 +95,7 @@ vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
 --[[ other useful commands.
 these are built-in but were somewhat hard to find.
 documenting here so it's easier to reference:
- - <c-o> and <c-i> for going between jump buffers
+ - <c-i> and <c-o> for going "in" and "out" of jump buffers
    (e.g., after using LSP to jump to def).
 --]]
 
