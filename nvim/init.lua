@@ -92,6 +92,12 @@ vim.keymap.set('t', '<C-k>', '<Esc>')
 vim.keymap.set('i', '<Esc>', '<nop>')
 -- Quick-save.
 vim.keymap.set('n', '<leader>w', '<cmd>w<cr>')
+--[[ other useful commands.
+these are built-in but were somewhat hard to find.
+documenting here so it's easier to reference:
+ - <c-o> and <c-i> for going between jump buffers
+   (e.g., after using LSP to jump to def).
+--]]
 
 -- Misc Vim settings.
 -- Relative line numbers.
