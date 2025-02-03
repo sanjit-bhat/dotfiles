@@ -70,6 +70,9 @@ export PATH=~/.cargo/bin:${PATH}
 # Go bins.
 export PATH=~/go/bin:${PATH}
 
+# Rust bins.
+export PATH="$(brew --prefix rustup)/bin":${PATH}
+
 # Zsh Vim bindings.
 bindkey -v
 
