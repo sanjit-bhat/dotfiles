@@ -30,14 +30,15 @@ Host churro
     User sanjit
     HostName localhost
     Port 22022
-Host jf2
-    User zain
-    HostName jf2.csail.mit.edu
-    Port 222
-Host sr
+Host sr03
     User sanjit
     HostName sr03.csail.mit.edu
-    ProxyJump jf2
+    ProxyJump jump
+    ForwardAgent yes
+Host sr04
+    User sanjit
+    HostName sr04.csail.mit.edu
+    ProxyJump jump
     ForwardAgent yes
 Host vm-web
     User arch
