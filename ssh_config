@@ -30,12 +30,12 @@ Host churro
     User sanjit
     HostName localhost
     Port 22022
-Host sr03
+Host sr3
     User sanjit
     HostName sr03.csail.mit.edu
     ProxyJump jump
     ForwardAgent yes
-Host sr04
+Host sr4
     User sanjit
     HostName sr04.csail.mit.edu
     ProxyJump jump
