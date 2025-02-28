@@ -18,6 +18,10 @@ Host jump
     User sanjit-bhat
     HostName jump.csail.mit.edu
     GSSAPIAuthentication yes
+Host jf2
+    User zain
+    HostName jf2.csail.mit.edu
+    Port 222
 Host ben
     User sanjit
     HostName ben.csail.mit.edu
@@ -38,7 +42,7 @@ Host sr3
 Host sr4
     User sanjit
     HostName sr04.csail.mit.edu
-    ProxyJump jump
+    ProxyJump jf2
     ForwardAgent yes
 Host vm-web
     User arch
