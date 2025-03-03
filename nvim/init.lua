@@ -131,3 +131,12 @@ vim.opt.swapfile = false
 -- Merge "sign" column (i.e., where LSP errors show) with "number" column.
 -- This also fixes sign column oscillation with repeated error checking.
 vim.opt.signcolumn = "number"
+
+-- Disable auto-indentation for LaTeX files.
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "tex",
+    callback = function()
+        vim.bo.autoindent = false
+        vim.bo.indentkeys = ""
+    end,
+})
