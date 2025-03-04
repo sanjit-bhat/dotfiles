@@ -22,6 +22,11 @@ Host jf2
     User zain
     HostName jf2.csail.mit.edu
     Port 222
+Host jarvis
+     User arch
+     HostName jarvis.pdos.csail.mit.edu
+     IdentityFile ~/.ssh/id_ed25519
+     ProxyJump jf2
 Host ben
     User sanjit
     HostName ben.csail.mit.edu
@@ -37,7 +42,7 @@ Host churro
 Host sr3
     User sanjit
     HostName sr03.csail.mit.edu
-    ProxyJump jump
+    ProxyJump jf2
     ForwardAgent yes
 Host sr4
     User sanjit
