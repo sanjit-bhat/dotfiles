@@ -27,7 +27,7 @@
 [alias]
     ad = add
     br = branch -v
-    ci = commit -m
+    ci = commit
     cl = clone
     co = checkout
     df = diff
