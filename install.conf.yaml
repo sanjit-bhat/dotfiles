@@ -11,6 +11,7 @@
     ~/.gitconfig:
     ~/.gitignore:
     ~/.inputrc:
+    ~/.p10k.zsh:
     ~/.ssh/config: 'ssh_config'
     ~/.tmux:
     ~/.tmux.conf: 'tmux/tmux.conf'
@@ -20,8 +21,6 @@
     ~/Library/LaunchAgents:
       glob: true
       path: launchd/*
-
-- create:
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
