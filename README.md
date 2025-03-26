@@ -25,3 +25,6 @@ keeps submodules at their proper versions
 1. This repository uses
 [dotbot](https://github.com/anishathalye/dotbot)
 to handle automatic installation of dotfiles
+1. I prefer to use Homebrew to manage as many dependencies as possible.
+That way, I only need to perform upgrades in one place.
+See `brew-pkgs` for current Homebrew pkgs.

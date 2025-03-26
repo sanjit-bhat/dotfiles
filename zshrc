@@ -5,11 +5,21 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Zsh Vim bindings.
+bindkey -v
+# Bind 'k' and 'j' to history search in Vim mode.
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
+
 # Zsh plugins.
-source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source "$(brew --prefix)"/share/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source "$(brew --prefix)"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# type in cmd prefix and accept matches.
+source "$(brew --prefix)"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# type in cmd sub-string and move around history matches.
+source "$(brew --prefix)"/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Autoload all ZSH functions in ~/.zfunc.
 # -U disables alias expansion.
@@ -17,8 +27,8 @@ source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.
 fpath=( ~/.zfunc "${fpath[@]}" )
 autoload -Uz $fpath[1]/*(.:t)
 
-# Set preferred editor for local and remote sessions.
-export EDITOR='nvim'
+# Preferred editor.
+export EDITOR="nvim"
 
 # Aliases.
 # This lets sudo expand aliases.
@@ -63,24 +73,14 @@ export PATH=~/.cargo/bin:${PATH}
 
 export PATH=~/go/bin:${PATH}
 
-export PATH="$(brew --prefix rustup)/bin":${PATH}
-
-# Zsh Vim bindings.
-bindkey -v
-
-# Bind 'k' and 'j' to history search in Vim mode.
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+export PATH="$(brew --prefix rustup)"/bin:${PATH}
 
 eval "$(rbenv init - zsh)"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [[ ! -r /Users/sanjit/.opam/opam-init/init.zsh ]] || source /Users/sanjit/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
 # Haskell.
-[ -f "/Users/sanjit/.ghcup/env" ] && source "/Users/sanjit/.ghcup/env" # ghcup-env
+[ -f "/Users/sanjit/.ghcup/env" ] && source "/Users/sanjit/.ghcup/env"
 
 # Default to standard Python venv.
 source ~/py-venv/std/bin/activate
