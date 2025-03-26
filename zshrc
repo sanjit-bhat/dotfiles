@@ -17,13 +17,10 @@ source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.
 fpath=( ~/.zfunc "${fpath[@]}" )
 autoload -Uz $fpath[1]/*(.:t)
 
-# Make z cmd work.
-. ~/.z.sh
-
 # Set preferred editor for local and remote sessions.
 export EDITOR='nvim'
 
-# Add aliases.
+# Aliases.
 # This lets sudo expand aliases.
 alias sudo="sudo "
 alias v="nvim"
@@ -57,20 +54,15 @@ case `uname` in
   ;;
 esac
 
-# Homebrew bins.
-export PATH=/opt/homebrew/bin:${PATH}
-export PATH=/opt/homebrew/sbin:${PATH}
+export PATH="$(brew --prefix)"/bin:${PATH}
+export PATH="$(brew --prefix)"/sbin:${PATH}
 
-# Dotfiles bins.
 export PATH=~/.dotfiles/bin:${PATH}
 
-# Cargo bins.
 export PATH=~/.cargo/bin:${PATH}
 
-# Go bins.
 export PATH=~/go/bin:${PATH}
 
-# Rust bins.
 export PATH="$(brew --prefix rustup)/bin":${PATH}
 
 # Zsh Vim bindings.
@@ -80,20 +72,21 @@ bindkey -v
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
-# Ruby configs.
 eval "$(rbenv init - zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Opam configs.
 [[ ! -r /Users/sanjit/.opam/opam-init/init.zsh ]] || source /Users/sanjit/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
-# Haskell configs.
+# Haskell.
 [ -f "/Users/sanjit/.ghcup/env" ] && source "/Users/sanjit/.ghcup/env" # ghcup-env
 
 # Default to standard Python venv.
 source ~/py-venv/std/bin/activate
 
-# Private zshrc.
-source ~/.dotfiles/priv/zshrc
+# Z. faster directory switching.
+. "$(brew --prefix z)"/etc/profile.d/z.sh
+
+# direnv. custom directory env vars.
+eval "$(direnv hook zsh)"

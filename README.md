@@ -25,10 +25,3 @@ keeps submodules at their proper versions
 1. This repository uses
 [dotbot](https://github.com/anishathalye/dotbot)
 to handle automatic installation of dotfiles
-1. I've structured these dotfiles to include a submodule to a
-[private dotfiles repo](https://github.com/sanjit-bhat/dotfiles-priv)
-under the `priv` directory.
-Currently, this repo has secret `zshrc` lines.
-If you're trying to use these dotfiles directly,
-you should `git rm priv` and delete the
-`source ~/.dotfiles/priv/zshrc` line in `zshrc`.
