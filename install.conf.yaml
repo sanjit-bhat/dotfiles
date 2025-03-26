@@ -11,11 +11,9 @@
     ~/.gitconfig:
     ~/.gitignore:
     ~/.inputrc:
-    ~/.p10k.zsh:
     ~/.ssh/config: 'ssh_config'
     ~/.tmux:
     ~/.tmux.conf: 'tmux/tmux.conf'
-    ~/.z.sh:
     ~/.zfunc:
     ~/.zsh:
     ~/.zshrc:
