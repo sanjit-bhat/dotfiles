@@ -90,3 +90,4 @@ source ~/py-venv/std/bin/activate
 
 # direnv. custom directory env vars.
 eval "$(direnv hook zsh)"
+export DIRENV_LOG_FORMAT=""
