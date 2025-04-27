@@ -5,11 +5,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Zsh Vim bindings.
-bindkey -v
-# Bind 'k' and 'j' to history search in Vim mode.
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+# Homebrew. needs to come early.
+export PATH=/opt/homebrew/bin:${PATH}
+export PATH=/opt/homebrew/sbin:${PATH}
 
 # Zsh plugins.
 source "$(brew --prefix)"/share/powerlevel10k/powerlevel10k.zsh-theme
@@ -20,6 +18,12 @@ source "$(brew --prefix)"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.
 source "$(brew --prefix)"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # type in cmd sub-string and move around history matches.
 source "$(brew --prefix)"/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Zsh Vim bindings.
+bindkey -v
+# Bind 'k' and 'j' to history search in Vim mode.
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 # Autoload all ZSH functions in ~/.zfunc.
 # -U disables alias expansion.
@@ -63,9 +67,6 @@ case `uname` in
     alias o="gio open"
   ;;
 esac
-
-export PATH="$(brew --prefix)"/bin:${PATH}
-export PATH="$(brew --prefix)"/sbin:${PATH}
 
 export PATH=~/.dotfiles/bin:${PATH}
 
