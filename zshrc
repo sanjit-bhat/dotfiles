@@ -9,19 +9,19 @@ fi
 export PATH=/opt/homebrew/bin:${PATH}
 export PATH=/opt/homebrew/sbin:${PATH}
 
+# Zsh Vim bindings.
+bindkey -v
+
 # Zsh plugins.
 source "$(brew --prefix)"/share/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source "$(brew --prefix)"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# type in cmd prefix and accept matches.
+# history search on cmd prefix.
 source "$(brew --prefix)"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# type in cmd sub-string and move around history matches.
+# history search on cmd fuzzy-match.
 source "$(brew --prefix)"/share/zsh-history-substring-search/zsh-history-substring-search.zsh
-
-# Zsh Vim bindings.
-bindkey -v
-# Bind 'k' and 'j' to history search in Vim mode.
+# bind 'k' and 'j' to history search in Vim mode.
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
