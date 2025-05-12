@@ -31,8 +31,9 @@
     cl = clone
     co = checkout
     df = diff
-    # commit format: "<hash><branch>|<date>|<committer>|<title>".
-    # show changed files, lines, modes. max 7 files.
+    # format: "<hash><branch>|<date>|<committer>|<title>".
+    # compact-summary: show changed files, lines, modes.
+    # stat-count: max 7 files.
     lg = log --graph --format='%C(auto)%h%d|%as|%cn|%s' --compact-summary --stat-count=7
     lt = show HEAD
     pl = pull
