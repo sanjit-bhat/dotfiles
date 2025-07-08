@@ -10,6 +10,8 @@ vim.cmd([[
 highlight CoqtailChecked guibg=NvimLightGray1
 highlight CoqtailSent guibg=NvimLightGray3
 ]])
+-- Coq -> Rocq. until this is fixed upstream.
+vim.g.coqtail_project_names = {'_CoqProject', '_RocqProject'}
 
 -- Plugin: latex-unicoder.vim (tex unicode).
 -- Note: Std Latex symbs already exist in the package.
