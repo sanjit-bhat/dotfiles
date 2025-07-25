@@ -45,9 +45,10 @@
     rv = revert
     sh = show
     sm = submodule
+    smu = submodule update
     ss = status
     st = stash
-    upd = !git stash && git pull && git submodule update --recursive && git stash pop
+    upd = !git stash && git pull && git submodule update && git stash pop
 [interactive]
     diffFilter = delta --color-only
 [delta]
