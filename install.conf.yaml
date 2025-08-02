@@ -16,11 +16,7 @@
     ~/.tmux:
     ~/.tmux.conf: 'tmux/tmux.conf'
     ~/.zfunc:
-    ~/.zsh:
     ~/.zshrc:
-    ~/Library/LaunchAgents:
-      glob: true
-      path: launchd/*
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
