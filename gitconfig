@@ -9,6 +9,7 @@
     pager = delta
 [advice]
     detachedHead = false
+    statusHints = false
 [color]
     ui = true
 [branch]
