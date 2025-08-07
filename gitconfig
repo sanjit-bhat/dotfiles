@@ -1,6 +1,6 @@
 [user]
     name = Sanjit Bhat
-    email = sanjit.bhat@gmail.com
+    email = sanjit.bhat@gmail.co
     signingkey = ~/.ssh/id_ed25519.pub
 [core]
     autocrlf = input
@@ -27,8 +27,9 @@
     format = ssh
 [alias]
     ad = add
-    br = branch -v
-    ci = commit
+    br = branch --verbose
+    ci = commit --edit
+    cia = commit --amend
     cl = clone
     co = checkout
     df = diff
@@ -40,8 +41,11 @@
     pu = push
     rb = rebase
     ro = remote
-    rt = restore
+    # almost always use `--hard`, to rest both index and working tree.
+    rs = reset --hard
+    rt = restore --worktree
     rts = restore --staged
+    rta = restore --staged --worktree
     rv = revert
     sh = show
     sm = submodule
