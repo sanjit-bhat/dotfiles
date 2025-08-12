@@ -1,6 +1,6 @@
 [user]
     name = Sanjit Bhat
-    email = sanjit.bhat@gmail.co
+    email = sanjit.bhat@gmail.com
     signingkey = ~/.ssh/id_ed25519.pub
 [core]
     autocrlf = input
