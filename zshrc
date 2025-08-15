@@ -48,6 +48,7 @@ alias ta="tmux attach -t"
 alias g="git"
 alias wifi="ping google.com"
 alias d="delta"
+alias rg="rg -S"
 
 # Conditional aliases depending on OS.
 case `uname` in
