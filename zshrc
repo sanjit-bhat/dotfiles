@@ -39,9 +39,6 @@ export EDITOR="nvim"
 alias sudo="sudo "
 alias v="nvim"
 alias m="make"
-alias p="python3"
-alias python="python3"
-alias pip="pip3"
 alias tl="tmux ls"
 alias tn="tmux new -s"
 alias ta="tmux attach -t"
@@ -69,6 +66,8 @@ case `uname` in
   ;;
 esac
 
+export PATH=~/.local/bin:${PATH}
+
 export PATH=~/.dotfiles/bin:${PATH}
 
 export PATH=~/.cargo/bin:${PATH}
@@ -83,9 +82,6 @@ eval "$(rbenv init - zsh)"
 
 # Haskell.
 [ -f "/Users/sanjit/.ghcup/env" ] && source "/Users/sanjit/.ghcup/env"
-
-# Default to standard Python venv.
-source ~/py-venv/std/bin/activate
 
 # Z. faster directory switching.
 . "$(brew --prefix z)"/etc/profile.d/z.sh

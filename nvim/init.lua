@@ -144,3 +144,6 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.bo.indentkeys = ""
     end,
 })
+
+-- make python provider target global venv, which has `pyvenv` installed.
+vim.g.python3_host_prog = '~/.venv/bin/python'
