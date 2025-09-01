@@ -17,7 +17,6 @@
 [pull]
     rebase = true
 [push]
-    default = tracking
     autoSetupRemote = true
 [commit]
     gpgsign = true
