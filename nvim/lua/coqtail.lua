@@ -10,6 +10,8 @@ vim.cmd([[
 highlight CoqtailChecked guibg=NvimLightGray1
 highlight CoqtailSent guibg=NvimLightGray3
 ]])
+-- mappings.
+vim.keymap.set('n', '<leader>co', ':RocqOmitToLine<cr>')
 
 -- Plugin: latex-unicoder.vim (tex unicode).
 -- Note: standard latex symbs already exist in the package.
