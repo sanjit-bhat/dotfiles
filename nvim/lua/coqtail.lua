@@ -12,7 +12,7 @@ highlight CoqtailSent guibg=NvimLightGray3
 ]])
 
 -- Plugin: latex-unicoder.vim (tex unicode).
--- Note: Std Latex symbs already exist in the package.
+-- Note: standard latex symbs already exist in the package.
 iris = {}
 iris['fun']        = 'λ'
 iris['mult']       = '⋅'
