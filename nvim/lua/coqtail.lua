@@ -75,4 +75,5 @@ iris['\\notequiv'] = '≢'
 iris['equiv']      = '⊣⊢'
 iris['in']         = '↪'
 iris['cred']       = '£'
+iris['wand']       = '-∗'
 vim.g.unicode_map  = iris
