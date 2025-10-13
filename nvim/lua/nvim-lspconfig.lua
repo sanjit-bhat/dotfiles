@@ -1,9 +1,7 @@
--- Setting up all the LSPs.
-local lspconfig = require('lspconfig')
 -- Golang.
-lspconfig.gopls.setup {}
+vim.lsp.enable('gopls')
 -- Rust.
-lspconfig.rust_analyzer.setup {
+vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
             diagnostics = {
@@ -11,11 +9,12 @@ lspconfig.rust_analyzer.setup {
             }
         }
     }
-}
+})
+vim.lsp.enable('rust_analyzer')
 -- Python formatting and linting.
-lspconfig.ruff.setup {}
+vim.lsp.enable('ruff')
 -- Python.
-lspconfig.pyright.setup {}
+vim.lsp.enable('pyright')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
