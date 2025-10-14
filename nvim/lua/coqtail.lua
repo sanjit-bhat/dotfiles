@@ -1,3 +1,4 @@
+-- Plugin: whonore/Coqtail
 -- disable mapping leader key in insert mode. it slows down leader keypress.
 vim.g.coqtail_noimap = 1
 -- Auto-indenting is buggy.
@@ -13,7 +14,7 @@ highlight CoqtailSent guibg=NvimLightGray3
 -- mappings.
 vim.keymap.set('n', '<leader>co', ':RocqOmitToLine<cr>')
 
--- Plugin: latex-unicoder.vim (tex unicode).
+-- Plugin: latex-unicoder.vim
 -- Note: standard latex symbs already exist in the package.
 iris = {}
 iris['fun']        = 'λ'
