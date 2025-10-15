@@ -1,6 +1,6 @@
--- Golang.
+-- Golang. https://github.com/golang/tools/tree/master/gopls
 vim.lsp.enable('gopls')
--- Rust.
+-- Rust. https://github.com/rust-lang/rust-analyzer
 vim.lsp.config('rust_analyzer', {
     settings = {
         ['rust-analyzer'] = {
@@ -11,10 +11,10 @@ vim.lsp.config('rust_analyzer', {
     }
 })
 vim.lsp.enable('rust_analyzer')
--- Python formatting and linting.
+-- Python formatting and linting. https://github.com/astral-sh/ruff
 vim.lsp.enable('ruff')
--- Python.
-vim.lsp.enable('pyright')
+-- Python type checking. https://github.com/astral-sh/ty
+vim.lsp.enable('ty')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
