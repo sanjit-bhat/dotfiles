@@ -51,6 +51,8 @@
     smu = submodule update
     ss = status
     st = stash
+    # limitation: if working dir clean but stash non-empty,
+    # this incorrectly pops from stash.
     upd = !git stash && git pull && git submodule update && git stash pop
 [interactive]
     diffFilter = delta --color-only
