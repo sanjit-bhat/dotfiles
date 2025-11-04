@@ -18,6 +18,8 @@
     rebase = true
 [rebase]
     autoStash = true
+[submodule]
+    recurse = true
 [push]
     autoSetupRemote = true
 [commit]
@@ -27,6 +29,7 @@
 [gpg]
     format = ssh
 [alias]
+    # TODO: many flags have analog config settings.
     ad = add
     br = branch --verbose
     ci = commit --edit
@@ -53,7 +56,6 @@
     smu = submodule update
     ss = status
     st = stash
-    upd = !git pull && git submodule update
 [interactive]
     diffFilter = delta --color-only
 [delta]
