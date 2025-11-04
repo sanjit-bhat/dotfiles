@@ -16,6 +16,8 @@
     autosetuprebase = always
 [pull]
     rebase = true
+[rebase]
+    autoStash = true
 [push]
     autoSetupRemote = true
 [commit]
@@ -51,9 +53,7 @@
     smu = submodule update
     ss = status
     st = stash
-    # limitation: if working dir clean but stash non-empty,
-    # this incorrectly pops from stash.
-    upd = !git stash && git pull && git submodule update && git stash pop
+    upd = !git pull && git submodule update
 [interactive]
     diffFilter = delta --color-only
 [delta]
