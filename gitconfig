@@ -2,16 +2,14 @@
     name = Sanjit Bhat
     email = sanjit.bhat@gmail.com
     signingkey = ~/.ssh/id_ed25519.pub
-[core]
-    autocrlf = input
-    editor = nvim
-    excludesfile = ~/.gitignore
-    pager = delta
-[advice]
-    detachedHead = false
-    statusHints = false
-[color]
-    ui = true
+
+# security.
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
+
+# core git ops.
 [branch]
     autosetuprebase = always
 [pull]
@@ -22,12 +20,21 @@
     recurse = true
 [push]
     autoSetupRemote = true
-[commit]
-    gpgsign = true
+
+# random settings.
+[core]
+    autocrlf = input
+    editor = nvim
+    excludesfile = ~/.gitignore
+    pager = delta
+[advice]
+    detachedHead = false
+    statusHints = false
+[color]
+    ui = true
 [init]
     defaultBranch = main
-[gpg]
-    format = ssh
+
 [alias]
     # TODO: many flags have analog config settings.
     ad = add
@@ -56,6 +63,8 @@
     smu = submodule update
     ss = status
     st = stash
+
+# use `delta` for `git diff`.
 [interactive]
     diffFilter = delta --color-only
 [delta]
