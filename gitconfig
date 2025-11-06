@@ -16,8 +16,8 @@
     rebase = true
 [rebase]
     autoStash = true
-[submodule]
-    recurse = true
+[fetch]
+    recurseSubmodules = on-demand
 [push]
     autoSetupRemote = true
 
