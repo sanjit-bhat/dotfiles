@@ -40,7 +40,6 @@
     ci = commit --edit
     cia = commit --amend
     cl = clone
-    co = checkout
     df = diff
     # format: "<hash><branch>|<date>|<committer>|<title>".
     # compact-summary: show changed files, lines, modes.
@@ -62,6 +61,7 @@
     smu = submodule update
     ss = status
     st = stash
+    sw = switch --recurse-submodules
 
 # use `delta` for `git diff`.
 [interactive]
