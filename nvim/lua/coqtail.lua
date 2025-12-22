@@ -17,7 +17,6 @@ vim.keymap.set('n', '<leader>co', ':RocqOmitToLine<cr>')
 -- Plugin: latex-unicoder.vim
 -- Note: standard latex symbs already exist in the package.
 iris = {}
-iris['fun']        = 'λ'
 iris['mult']       = '⋅'
 iris['ent']        = '⊢'
 iris['valid']      = '✓'
