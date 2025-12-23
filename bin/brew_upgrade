@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-echo "`date`: RUNNING: brew upgrade"
-brew upgrade
-
-echo "`date`: RUNNING: brew cleanup"
-brew cleanup
-
-echo "`date`: DONE!"

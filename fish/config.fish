@@ -28,11 +28,10 @@ if test -e /opt/homebrew/bin/direnv
 end
 
 # configure ecosystems.
+fish_add_path ~/.local/bin ~/.cargo/bin ~/go/bin
 if test -e /opt/homebrew/bin/rustup
     fish_add_path (brew --prefix rustup)/bin
 end
-fish_add_path ~/.local/bin ~/.dotfiles/bin
-fish_add_path ~/.cargo/bin ~/go/bin (brew --prefix rustup)/bin
 
 # misc.
 set -gx EDITOR nvim

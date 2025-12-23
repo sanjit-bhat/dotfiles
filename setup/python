@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-
-# Save previous installed packages
-# pip3 list | awk '{print $1}' | tail -n +3 > python_packages.txt
-
-# Install all of the previous packages
-cat python_packages.txt | xargs -I {} pip3 install {}
