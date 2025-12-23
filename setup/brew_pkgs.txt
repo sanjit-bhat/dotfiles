@@ -12,6 +12,7 @@ cppcheck
 diff-so-fancy
 direnv
 dotnet
+eza
 fd
 ffmpeg
 findutils
@@ -22,6 +23,7 @@ gh
 git
 git-delta
 gnu-sed
+gnu-tar
 gnupg
 gnuplot
 go
@@ -49,9 +51,6 @@ starship
 taplo
 tlrc
 tmux
-tree
 typos-cli
 uv
-z
-z3
 zoxide
