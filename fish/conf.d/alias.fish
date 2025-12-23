@@ -1,5 +1,6 @@
 abbr --add g git
 abbr --add v nvim
+abbr --add d delta
 
 alias make="caffeinate make"
 alias ls="eza"
