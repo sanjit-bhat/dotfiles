@@ -1,7 +1,7 @@
 Sanjit's Dotfiles
 =================
 
-Steps for setting up these dotfiles:
+Steps for setting up dev environment:
 1. Clone this repo.
 1. Run `./install` to link everything and automatically clone the submodules.
 1. Install `homebrew` for package management.
@@ -13,3 +13,6 @@ That way, I only need to perform upgrades in one place.)
 [here](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k).
 1. Load up `ITerm2` and apply `ITerm-Powerlevel10k.json` as the default config.
 This sets the terminal color scheme and MesloLGF font.
+1. At OS-level, re-map:
+  * "caps lock" to "control". highly used in vim; easiest spot to reach.
+  * "control" to "escape". used to change vim modes; easier to reach.
