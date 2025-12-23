@@ -8,6 +8,9 @@
 - link:
     ~/.config/nvim: 'nvim'
     ~/.dotfiles: ''
+    ~/.config/fish/conf.d:
+      create: true
+      path: fish/conf.d
     ~/.config/fish/config.fish:
       create: true
       path: fish/config.fish

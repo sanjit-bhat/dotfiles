@@ -6,24 +6,28 @@ end
 # standard ~/.config/fish/functions is managed by fisher.
 set fish_function_path $__fish_config_dir/user_functions $fish_function_path
 
-# aliases.
-abbr --add g git
-abbr --add v nvim
-
-# starship: shell prompt.
-status --is-interactive; and starship init fish | source
-
-# zoxide: fast dir switching.
-status --is-interactive; and zoxide init fish | source
-
-# direnv: custom .envrc files.
-direnv hook fish | source
-set -gx DIRENV_LOG_FORMAT
-
-# configure ecosystems.
+# homebrew. needs to come early.
 if test -e /opt/homebrew/bin/brew
     eval (/opt/homebrew/bin/brew shellenv)
 end
+
+# starship: shell prompt.
+if status --is-interactive; and test -e /opt/homebrew/bin/starship
+    starship init fish | source
+end
+
+# zoxide: fast dir switching.
+if status --is-interactive; and test -e /opt/homebrew/bin/zoxide
+    zoxide init fish | source
+end
+
+# direnv: custom .envrc files.
+if test -e /opt/homebrew/bin/direnv
+    direnv hook fish | source
+    set -gx DIRENV_LOG_FORMAT
+end
+
+# configure ecosystems.
 if test -e /opt/homebrew/bin/rustup
     fish_add_path (brew --prefix rustup)/bin
 end
