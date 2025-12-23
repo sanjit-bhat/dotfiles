@@ -32,3 +32,4 @@ fish_add_path ~/.cargo/bin ~/go/bin (brew --prefix rustup)/bin
 
 # misc.
 set -gx EDITOR nvim
+fish_vi_key_bindings
