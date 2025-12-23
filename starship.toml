@@ -1,0 +1,19 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = """
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$character"""
+
+[git_branch]
+format = "$branch"
+
+[git_status]
+ahead = "⇡$count"
+behind = "⇣$count"
+diverged = "⇡$ahead_count ⇣$behind_count"
+modified = ""
