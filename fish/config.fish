@@ -13,6 +13,9 @@ abbr --add v nvim
 # starship: shell prompt.
 status --is-interactive; and starship init fish | source
 
+# zoxide: fast dir switching.
+status --is-interactive; and zoxide init fish | source
+
 # direnv: custom .envrc files.
 direnv hook fish | source
 set -gx DIRENV_LOG_FORMAT
