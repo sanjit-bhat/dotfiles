@@ -1,3 +1,0 @@
- # Convert from heic to jpeg format.
- in="$1"
- sips -s format jpeg -s formatOptions normal $in --out "${in%.*}.jpeg" && rm $in

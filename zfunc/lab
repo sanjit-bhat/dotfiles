@@ -1,3 +1,0 @@
-# Swap display arrangement. They sometimes get switched in my lab setup.
-# From: https://github.com/jakehilborn/displayplacer/issues/80#issuecomment-1080213905.
-id1=50DB6892-4389-4603-A28F-145BB3BB1AE2 && id2=CAE1FEF7-B11B-4900-8085-5BACB67A0896 && displayplacer list | tail -n1 | sed "s/$id1/\n/g;s/$id2/$id1/g;s/\n/$id2/g;s/displayplacer//" | xargs displayplacer

@@ -1,2 +1,0 @@
-# pipe rg output into delta, for better paging. e.g., `rgd {normal rg args}`.
-rg --smart-case --json "$@" | delta

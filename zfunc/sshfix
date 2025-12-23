@@ -1,2 +1,0 @@
-# load keys from keychain into ssh agent. used after restart.
-ssh-add --apple-load-keychain
