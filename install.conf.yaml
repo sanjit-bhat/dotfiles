@@ -25,4 +25,5 @@
     ~/.tmux.conf: 'tmux/tmux.conf'
 
 - shell:
+    # checkout proper versions of submodules.
     - [git submodule update --init --recursive, Installing submodules]
