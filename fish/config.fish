@@ -32,6 +32,9 @@ fish_add_path ~/.local/bin ~/.cargo/bin ~/go/bin
 if test -e /opt/homebrew/bin/rustup
     fish_add_path (brew --prefix rustup)/bin
 end
+if test -e ~/.opam/opam-init/init.fish
+    source ~/.opam/opam-init/init.fish
+end
 
 # misc.
 set -gx EDITOR nvim
