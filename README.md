@@ -14,5 +14,5 @@ That way, I only need to perform upgrades in one place.)
 1. Load up `ITerm2` and apply `ITerm-Powerlevel10k.json` as the default config.
 This sets the terminal color scheme and MesloLGF font.
 1. At OS-level, re-map:
-  * "caps lock" to "control". highly used in vim; easiest spot to reach.
-  * "control" to "escape". used to change vim modes; easier to reach.
+    1. `caps lock` to `control`. highly used in vim; easiest spot to reach.
+    1. `control` to `escape`. used to change vim modes; easier to reach.
