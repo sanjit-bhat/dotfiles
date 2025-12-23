@@ -11,11 +11,6 @@
     ~/.config/fish/config.fish:
       create: true
       path: fish/config.fish
-    ~/.config/fish/fish_plugins:
-      create: true
-      path: fish/fish_plugins
-    ~/.config/fish/conf.d:
-      path: fish/conf.d
     ~/.config/fish/user_functions:
       path: fish/user_functions
     ~/.gitconfig:
