@@ -1,0 +1,6 @@
+function load_keys
+    # load id_ed25519 into ssh_agent using passphrase stored in macOS keychain.
+    ssh-add --apple-load-keychain
+    # get kerberos tickets for sanjit-bhat@csail.mit.edu.
+    kinit sanjit-bhat
+end
