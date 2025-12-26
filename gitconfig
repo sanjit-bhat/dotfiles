@@ -50,8 +50,8 @@
     pu = push
     rb = rebase
     ro = remote
-    # almost always use `--hard`, to rest both index and working tree.
-    rs = reset --hard
+    rs = reset
+    rsh = reset --hard
     rt = restore --worktree
     rts = restore --staged
     rta = restore --staged --worktree
