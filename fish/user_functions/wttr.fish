@@ -1,15 +1,15 @@
 function wttr -d "get the weather report"
-    argparse l/long -- $argv
+    argparse 'd/days=' 'l/location=' -- $argv
     or return
 
-    # https://wttr.in/:help
-    # u: US units.
-    # 0: just current weather.
-    # q: quiet.
-    # T: no colors.
-    if set -ql _flag_long
-        curl wttr.in?uqT
-    else
-        curl wttr.in?u0qT
+    if not set -qf _flag_days
+        set -f _flag_days 0
     end
+    if not set -qf _flag_location
+        set -f _flag_location "cambridge,ma,us"
+    end
+
+    # uses the OpenWeather API.
+    wego -days $_flag_days -location $_flag_location -units imperial \
+        -owm-api-key $OWM_API_KEY | ansifilter
 end
