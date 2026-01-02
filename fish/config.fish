@@ -27,6 +27,11 @@ if test -e /opt/homebrew/bin/direnv
     set -gx DIRENV_LOG_FORMAT
 end
 
+# colors for commands like fd.
+if test -e /opt/homebrew/bin/vivid
+    set -gx LS_COLORS (vivid generate gruvbox-light)
+end
+
 # configure ecosystems.
 fish_add_path ~/.local/bin ~/.cargo/bin ~/go/bin
 if test -e /opt/homebrew/bin/rustup
