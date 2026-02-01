@@ -1,4 +1,6 @@
 # Completions for make
+# this is a fork of the fish stdlib, with makefile target completions removed.
+# those were too slow, even for smaller makefiles.
 complete -c make -s f -d "Use file as makefile" -r
 complete -x -c make -s C -l directory -x -a "(__fish_complete_directories (commandline -ct))" -d "Change directory"
 complete -c make -s d -d "Debug mode"
