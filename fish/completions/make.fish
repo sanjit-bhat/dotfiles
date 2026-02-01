@@ -1,45 +1,4 @@
 # Completions for make
-function __fish_print_make_targets --argument-names directory file
-    # Since we filter based on localized text, we need to ensure the
-    # text will be using the correct locale.
-    set -lx LC_ALL C
-
-    set -l makeflags -C $directory
-    if test -n "$file"
-        set -a makeflags -f $file
-    end
-
-    if make --version 2>/dev/null | string match -q 'GNU*'
-        # https://stackoverflow.com/a/26339924
-        make $makeflags -pRrq : 2>/dev/null |
-            awk -F: -v 'bs_regex=\\\\\\\\' '/^# Files/,/^# Finished Make data base/ {
-                if ($1 == "# Not a target") skip = 1;
-                if ($1 !~ "^[#.\t]" && !is_continuation ) {
-                    if (!skip) print $1;
-                    skip = 0
-                }
-                is_continuation = $0 ~ "^([^#]*[^#" bs_regex "])?(" bs_regex bs_regex ")*" bs_regex "$";
-            }' 2>/dev/null
-    else
-        # FreeBSD/NetBSD
-        make $makeflags -V .ALLTARGETS 2>/dev/null | string split ' '
-        # OpenBSD
-        or make $makeflags -d g1 -rn 2>/dev/null | awk '/^[^#. \t].+:/ { gsub(/:.*/, "", $1); print $1 }'
-    end
-end
-
-function __fish_complete_make_targets
-    set -l directory (string replace -rf '^make .*(-C ?|--directory(=| +))([^ ]*) .*$' '$3' -- $argv)
-    or set directory .
-    set -l file (string replace -rf '^make .*(-f ?|--file(=| +))([^ ]*) .*$' '$3' -- $argv)
-    __fish_print_make_targets $directory $file
-end
-
-# This completion reenables file completion on
-# assignments, so e.g. 'make foo FILES=<tab>' will receive standard
-# filename completion.
-complete -c make -n 'commandline -ct | string match -q "*=*"' -a "(__fish_complete_make_targets (commandline -p))" -d Target
-complete -f -c make -n 'commandline -ct | not string match -q "*=*"' -a "(__fish_complete_make_targets (commandline -p))" -d Target
 complete -c make -s f -d "Use file as makefile" -r
 complete -x -c make -s C -l directory -x -a "(__fish_complete_directories (commandline -ct))" -d "Change directory"
 complete -c make -s d -d "Debug mode"
