@@ -33,8 +33,9 @@
 [init]
     defaultBranch = main
 
+# TODO: many cmd params have analogs in gitconfig settings.
+# decide which is the better place to put stuff.
 [alias]
-    # TODO: many flags have analog config settings.
     ad = add
     br = branch --verbose
     ci = commit --edit
@@ -56,6 +57,12 @@
     rts = restore --staged
     rta = restore --staged --worktree
     rv = revert
+    # stage-add.
+    # it's annoying to manually stage files by path.
+    # this opens un-staged files in fzf, where they can be staged with Tab+Enter.
+    sa = !git ls-files --deleted --modified --others --deduplicate --exclude-standard | \
+        fzf --multi --preview 'git diff -- {} | delta --light' | \
+        xargs git add
     sh = show
     sm = submodule
     smu = submodule update
