@@ -1,7 +1,6 @@
 abbr --add d delta
 abbr --add g git
 abbr --add m make
-abbr --add peren perennial-cli
 abbr --add v nvim
 
 alias make="caffeinate make"
