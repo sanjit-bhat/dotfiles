@@ -69,6 +69,7 @@
     ss = status
     st = stash
     sw = switch --recurse-submodules
+    wt = worktree
 
 # use `delta` for `git diff`.
 [interactive]
