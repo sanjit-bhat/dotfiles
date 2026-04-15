@@ -77,4 +77,6 @@ iris['in']         = '↪'
 iris['cred']       = '£'
 iris['wand']       = '-∗'
 iris['pts']        = '↦'
+iris['lang']       = '⟨'
+iris['rang']       = '⟩'
 vim.g.unicode_map  = iris
