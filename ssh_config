@@ -35,10 +35,9 @@ Host 6828
     User arch
     HostName vm-6828.pdos.csail.mit.edu
     ProxyJump jump
-Host churro
+Host boop
     User sanjit
-    HostName localhost
-    Port 22022
+    HostName 192.168.64.7
 Host sr1
     User sanjit
     HostName sr01.csail.mit.edu
