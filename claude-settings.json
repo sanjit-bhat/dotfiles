@@ -1,0 +1,19 @@
+{
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "light",
+  "editorMode": "vim",
+  "preferredNotifChannel": "terminal_bell",
+  "permissions": {
+    "allow": [
+        "Read(~/scratch)"
+    ]
+  },
+  "sandbox": {
+    "enabled": true
+  }
+}
