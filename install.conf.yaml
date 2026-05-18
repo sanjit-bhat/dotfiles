@@ -1,6 +1,7 @@
 ---
 - defaults:
     link:
+      create: true
       relink: true
 
 - clean: ['~']
@@ -9,8 +10,6 @@
     ~/.config/nvim: 'nvim'
     ~/.dotfiles: ''
     ~/.config/fish/completions:
-      # only need this once for fish sub-dir.
-      create: true
       path: fish/completions
     ~/.config/fish/conf.d:
       path: fish/conf.d
