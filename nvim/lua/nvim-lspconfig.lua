@@ -15,6 +15,8 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('ruff')
 -- Python type checking. https://github.com/astral-sh/ty
 vim.lsp.enable('ty')
+-- Typescript.
+vim.lsp.enable('ts_ls')
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
