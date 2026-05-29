@@ -4,7 +4,6 @@ abbr --add m make
 abbr --add o open
 abbr --add v nvim
 
-alias make="caffeinate make"
 alias ls="eza"
 
 # use GNU versions.
