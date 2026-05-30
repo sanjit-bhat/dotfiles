@@ -8,10 +8,8 @@ vim.pack.add({
     'https://github.com/whonore/Coqtail',
     -- Unicode symbol input with latex commands.
     'https://github.com/joom/latex-unicoder.vim',
-    -- Required telescope dep: async helper module.
-    'https://github.com/nvim-lua/plenary.nvim',
     -- Fuzzy file/buffer/word finder.
-    'https://github.com/nvim-telescope/telescope.nvim',
+    'https://github.com/ibhagwan/fzf-lua',
     -- Sensible default configs for most LSP servers.
     'https://github.com/neovim/nvim-lspconfig',
 })
@@ -27,12 +25,11 @@ vim.cmd.colorscheme('gruvbox-material')
 require('nvim-lspconfig')
 require('coqtail')
 
--- Plugin: telescope (fuzzy finder).
-require('telescope')
-tel = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', function() tel.find_files() end)
-vim.keymap.set('n', '<leader>fg', function() tel.live_grep() end)
-vim.keymap.set('n', '<leader>fb', function() tel.buffers() end)
+-- Plugin: fzf-lua (fuzzy finder).
+local fzf = require('fzf-lua')
+vim.keymap.set('n', '<leader>ff', function() fzf.files() end)
+vim.keymap.set('n', '<leader>fg', function() fzf.live_grep() end)
+vim.keymap.set('n', '<leader>fb', function() fzf.buffers() end)
 
 -- Misc key bindings.
 -- No highlight.

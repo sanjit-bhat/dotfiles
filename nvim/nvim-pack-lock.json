@@ -4,6 +4,10 @@
       "rev": "b8f12a068046670645cff583733a32296f4ca261",
       "src": "https://github.com/whonore/Coqtail"
     },
+    "fzf-lua": {
+      "rev": "fea9eedc6894c44d44cbb772a5cd11c93b82d7a1",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
     "gruvbox-material": {
       "rev": "11d779b26a9ab2b3db8c22c6ac9fb6e8ed4fea79",
       "src": "https://github.com/sainnhe/gruvbox-material"
@@ -15,14 +19,6 @@
     "nvim-lspconfig": {
       "rev": "9573948c38bfabeec353ae7dd7d3ffec4c506a6b",
       "src": "https://github.com/neovim/nvim-lspconfig"
-    },
-    "plenary.nvim": {
-      "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
-      "src": "https://github.com/nvim-lua/plenary.nvim"
-    },
-    "telescope.nvim": {
-      "rev": "7d324792b7943e4aa16ad007212e6acc6f9fe335",
-      "src": "https://github.com/nvim-telescope/telescope.nvim"
     }
   }
 }
