@@ -8,6 +8,8 @@ vim.pack.add({
     'https://github.com/whonore/Coqtail',
     -- Unicode symbol input with latex commands.
     'https://github.com/joom/latex-unicoder.vim',
+    -- Icons (for fzf-lua).
+    'https://github.com/nvim-tree/nvim-web-devicons',
     -- Fuzzy file/buffer/word finder.
     'https://github.com/ibhagwan/fzf-lua',
     -- Sensible default configs for most LSP servers.
@@ -30,6 +32,8 @@ local fzf = require('fzf-lua')
 vim.keymap.set('n', '<leader>ff', function() fzf.files() end)
 vim.keymap.set('n', '<leader>fg', function() fzf.live_grep() end)
 vim.keymap.set('n', '<leader>fb', function() fzf.buffers() end)
+-- lua help pages.
+vim.keymap.set('n', '<leader>fl', function() fzf.helptags() end)
 
 -- Misc key bindings.
 -- No highlight.
