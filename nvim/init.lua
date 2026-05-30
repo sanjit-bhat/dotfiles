@@ -1,51 +1,26 @@
 -- Core Vim options that have to go early.
 vim.g.mapleader = ' '
 
--- Bootstrap package manager.
-local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
-if not vim.loop.fs_stat(lazypath) then
-    vim.fn.system({
-        'git',
-        'clone',
-        '--filter=blob:none',
-        'https://github.com/folke/lazy.nvim.git',
-        '--branch=stable',
-        lazypath,
-    })
-end
-vim.opt.rtp:prepend(lazypath)
-
--- Plugin includes.
-require('lazy').setup({
+vim.pack.add({
     -- Colorscheme.
-    {
-        'sainnhe/gruvbox-material',
-        priority = 1000,
-        lazy = false,
-        config = function()
-            vim.opt.background = 'light'
-            -- My env doesn't support italics.
-            vim.g.gruvbox_material_disable_italic_comment = 1
-            vim.cmd.colorscheme('gruvbox-material')
-        end,
-    },
+    'https://github.com/sainnhe/gruvbox-material',
     -- Coq support.
-    'whonore/Coqtail',
+    'https://github.com/whonore/Coqtail',
     -- Unicode symbol input with latex commands.
-    'joom/latex-unicoder.vim',
+    'https://github.com/joom/latex-unicoder.vim',
+    -- Required telescope dep: async helper module.
+    'https://github.com/nvim-lua/plenary.nvim',
     -- Fuzzy file/buffer/word finder.
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = {
-            -- Required telescope.vim dep. Helper module for async lua.
-            'nvim-lua/plenary.nvim',
-            -- Optional telescope.vim dep. Fast fuzzy sorting.
-            { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
-        },
-    },
+    'https://github.com/nvim-telescope/telescope.nvim',
     -- Sensible default configs for most LSP servers.
-    'neovim/nvim-lspconfig',
+    'https://github.com/neovim/nvim-lspconfig',
 })
+
+-- Colorscheme.
+vim.opt.background = 'light'
+-- My env doesn't support italics.
+vim.g.gruvbox_material_disable_italic_comment = 1
+vim.cmd.colorscheme('gruvbox-material')
 
 -- Some plugins need a lot of config, so move those to sep modules.
 -- Lua searches for these in `~/.config/nvim/lua`.
@@ -53,7 +28,7 @@ require('nvim-lspconfig')
 require('coqtail')
 
 -- Plugin: telescope (fuzzy finder).
-require('telescope').load_extension('fzf')
+require('telescope')
 tel = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', function() tel.find_files() end)
 vim.keymap.set('n', '<leader>fg', function() tel.live_grep() end)
