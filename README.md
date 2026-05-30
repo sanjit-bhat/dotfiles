@@ -5,7 +5,8 @@ Steps for setting up dev environment:
 1. Clone this repo.
 1. Run `./install` to link everything and automatically clone the submodules.
 1. Install `homebrew` for package management.
-`brew-pkgs` contains a checkpoint of my packages.
+`Brewfile` contains a checkpoint of my packages,
+and can be installed with `brew bundle`.
 (Note, I prefer to use one tool for as many dependencies as possible.
 That way, I only need to perform upgrades in one place.)
 1. Install `ITerm2` for a terminal.
