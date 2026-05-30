@@ -4,16 +4,18 @@ vim.g.mapleader = ' '
 vim.pack.add({
     -- Colorscheme.
     'https://github.com/sainnhe/gruvbox-material',
-    -- Coq support.
+    -- Rocq.
     'https://github.com/whonore/Coqtail',
     -- Unicode symbol input with latex commands.
     'https://github.com/joom/latex-unicoder.vim',
     -- Icons (for fzf-lua).
     'https://github.com/nvim-tree/nvim-web-devicons',
-    -- Fuzzy file/buffer/word finder.
+    -- Fuzzy finder.
     'https://github.com/ibhagwan/fzf-lua',
     -- Sensible default configs for most LSP servers.
     'https://github.com/neovim/nvim-lspconfig',
+    -- Lean.
+    'https://github.com/Julian/lean.nvim',
 })
 
 -- Colorscheme.
@@ -22,11 +24,6 @@ vim.opt.background = 'light'
 vim.g.gruvbox_material_disable_italic_comment = 1
 vim.cmd.colorscheme('gruvbox-material')
 
--- Some plugins need a lot of config, so move those to sep modules.
--- Lua searches for these in `~/.config/nvim/lua`.
-require('nvim-lspconfig')
-require('coqtail')
-
 -- Plugin: fzf-lua (fuzzy finder).
 local fzf = require('fzf-lua')
 vim.keymap.set('n', '<leader>ff', function() fzf.files() end)
@@ -34,6 +31,13 @@ vim.keymap.set('n', '<leader>fg', function() fzf.live_grep() end)
 vim.keymap.set('n', '<leader>fb', function() fzf.buffers() end)
 -- lua help pages.
 vim.keymap.set('n', '<leader>fl', function() fzf.helptags() end)
+
+-- Misc plugin setup.
+require('lean').setup({ mappings = true })
+-- Some plugins need a lot of config, so move those to sep modules.
+-- Lua searches for these in `~/.config/nvim/lua`.
+require('nvim-lspconfig')
+require('coqtail')
 
 -- Misc key bindings.
 -- No highlight.
