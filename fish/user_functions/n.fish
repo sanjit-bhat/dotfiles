@@ -1,3 +1,3 @@
 function n
-    nvim ~/src/n.txt
+    nvim ~/src/notes/n.txt
 end
