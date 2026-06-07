@@ -127,5 +127,7 @@ cask "betterdisplay"
 cask "font-meslo-lg-nerd-font"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Replacement for Docker Desktop
+cask "orbstack"
 # Virtual machines UI using QEMU
 cask "utm"

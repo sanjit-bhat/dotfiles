@@ -43,6 +43,9 @@ end
 if test -e ~/.opam/opam-init/init.fish
     source ~/.opam/opam-init/init.fish
 end
+if test -e ~/.orbstack/shell/init2.fish
+    source ~/.orbstack/shell/init2.fish
+end
 
 # misc.
 set -gx EDITOR nvim
