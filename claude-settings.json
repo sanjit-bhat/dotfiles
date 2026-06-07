@@ -3,7 +3,8 @@
     "allow": [
       "WebFetch",
       "WebSearch"
-    ]
+    ],
+    "skipDangerousModePermissionPrompt": true
   },
   "worktree": {
     "baseRef": "fresh"
@@ -13,11 +14,6 @@
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
-  "autoMemoryEnabled": true,
-  "autoDreamEnabled": true,
-  "skipDangerousModePermissionPrompt": true,
   "theme": "light",
-  "editorMode": "vim",
-  "preferredNotifChannel": "terminal_bell",
-  "autoCompactEnabled": true
+  "editorMode": "vim"
 }
