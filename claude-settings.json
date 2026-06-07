@@ -1,19 +1,23 @@
 {
+  "permissions": {
+    "allow": [
+      "WebFetch",
+      "WebSearch"
+    ]
+  },
+  "worktree": {
+    "baseRef": "fresh"
+  },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
+  "autoMemoryEnabled": true,
+  "autoDreamEnabled": true,
   "skipDangerousModePermissionPrompt": true,
   "theme": "light",
   "editorMode": "vim",
   "preferredNotifChannel": "terminal_bell",
-  "permissions": {
-    "allow": [
-        "Read(~/scratch)"
-    ]
-  },
-  "sandbox": {
-    "enabled": true
-  }
+  "autoCompactEnabled": true
 }
