@@ -50,6 +50,8 @@
     pl = !git pull && git submodule update
     pu = push
     rb = rebase
+    # resign all commits since upstream. claude lacks my signing key.
+    resign = rebase --exec 'git commit --amend --only --no-edit --gpg-sign'
     ro = remote
     rs = reset
     rsh = reset --hard
