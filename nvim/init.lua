@@ -111,17 +111,5 @@ vim.opt.swapfile = false
 -- This also fixes sign column oscillation with repeated error checking.
 vim.opt.signcolumn = "number"
 
--- Disable auto-indentation for LaTeX files.
-vim.api.nvim_create_autocmd("FileType", {
-    pattern = "tex",
-    callback = function()
-        vim.bo.autoindent = false
-        vim.bo.smartindent = false
-        vim.bo.cindent = false
-        vim.bo.indentexpr = ""
-        vim.bo.indentkeys = ""
-    end,
-})
-
 -- make python provider target global venv, which has `pyvenv` installed.
 vim.g.python3_host_prog = '~/.venv/bin/python'
