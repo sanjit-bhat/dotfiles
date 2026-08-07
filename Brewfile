@@ -126,10 +126,20 @@ brew "wego"
 brew "zoxide"
 # Display management tool
 cask "betterdisplay"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Web browser
+cask "firefox"
 cask "font-meslo-lg-nerd-font"
+# Web browser
+cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Full TeX Live distribution without GUI applications
+cask "mactex-no-gui"
 # Replacement for Docker Desktop
 cask "orbstack"
 # Virtual machines UI using QEMU
 cask "utm"
+# Video communication and virtual meeting platform
+cask "zoom"
