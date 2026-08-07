@@ -6,14 +6,17 @@
     ],
     "skipDangerousModePermissionPrompt": true
   },
+  "model": "opus[1m]",
   "worktree": {
     "baseRef": "fresh"
   },
   "enabledPlugins": {
     "gopls-lsp@claude-plugins-official": true
   },
+  "syntaxHighlightingDisabled": false,
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",
-  "theme": "light",
+  "tui": "fullscreen",
+  "theme": "light-daltonized",
   "editorMode": "vim"
 }
