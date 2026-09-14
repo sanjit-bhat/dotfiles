@@ -64,6 +64,8 @@ brew "gopls"
 brew "graphviz"
 # Improved top (interactive process viewer)
 brew "htop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
 # Handy way to save and run project-specific commands
 brew "just"
 # Pager program similar to more
@@ -94,6 +96,8 @@ brew "qemu"
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# GNU debugger for riscv64-elf cross development
+brew "riscv64-elf-gdb"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
 # Rust toolchain installer
@@ -124,6 +128,8 @@ brew "vivid"
 brew "wego"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# RISC-V toolchain including gcc (with newlib), simulator (spike), and pk
+brew "riscv-software-src/riscv/riscv-tools"
 # Display management tool
 cask "betterdisplay"
 # Anthropic's official Claude AI desktop app
