@@ -49,5 +49,5 @@ end
 
 # misc.
 set -gx EDITOR nvim
-fish_vi_key_bindings
+set -g fish_key_bindings fish_vi_key_bindings
 set -gx CLAUDE ~/OrbStack/agents/home/claude
