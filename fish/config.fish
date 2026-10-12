@@ -36,9 +36,9 @@ if command -q vivid
 end
 
 # configure ecosystems.
-fish_add_path ~/.local/bin ~/.cargo/bin ~/go/bin
+fish_add_path -g ~/.local/bin ~/.cargo/bin ~/go/bin
 if command -q rustup
-    fish_add_path (brew --prefix rustup)/bin
+    fish_add_path -g (brew --prefix rustup)/bin
 end
 if test -e ~/.opam/opam-init/init.fish
     source ~/.opam/opam-init/init.fish
